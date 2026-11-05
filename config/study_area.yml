@@ -1,0 +1,394 @@
+id: antalya_central
+feed_sha256: caff3834e75be575d2f19992b38c5650446747d38e7f026a7e5a2572ab7c145a
+sane: true
+parameters:
+  h3_resolution: 8
+  count_percentile: 75
+  minimum_stop_count: 5
+  buffer_m: 400
+  hole_filling: Interior rings of the density union are removed before the buffer.
+  component: Connected component, among cells at or above the threshold, that contains
+    the densest cell.
+  tie_break: Highest stop count, then lexicographic H3 index.
+  why_this_resolution: Resolution 8 is used only to delineate the dense service area.
+    A finer cell often contains too few stops for a density threshold. This is not
+    the Phase 2 accessibility lattice.
+computed:
+  occupied_cells: 883
+  p50_stops_per_occupied_cell: 3.0
+  p75_stops_per_occupied_cell: 7.0
+  p90_stops_per_occupied_cell: 13.0
+  threshold_stops: 7
+  core_cells: 193
+  densest_cell_stops: 38
+  area_km2_before_buffer: 179.57
+  area_km2: 237.03
+control_points:
+- id: kaleici
+  name: Kaleiçi
+  lon: 30.7056
+  lat: 36.8841
+  expect: inside
+  role: required
+  note: Historic centre of Antalya. A dense-service study area that misses this point
+    is not the central urban network.
+  inside: true
+  passed: true
+- id: kas
+  name: Kaş
+  lon: 29.6384
+  lat: 36.1997
+  expect: outside
+  role: required
+  note: Provincial town on the GTFS fringe. It must not enter the central comparison
+    area.
+  inside: false
+  passed: true
+- id: gazipasa
+  name: Gazipaşa
+  lon: 32.3142
+  lat: 36.2697
+  expect: outside
+  role: required
+  note: Eastern provincial fringe of this feed. It must not enter the central comparison
+    area.
+  inside: false
+  passed: true
+- id: airport
+  name: Antalya Airport
+  lon: 30.8005
+  lat: 36.8987
+  expect: inside
+  role: descriptive
+  note: Reported only. Failure does not by itself reject the polygon.
+  inside: false
+  passed: false
+- id: konyaalti
+  name: Konyaaltı
+  lon: 30.638
+  lat: 36.859
+  expect: inside
+  role: descriptive
+  note: Reported only.
+  inside: true
+  passed: true
+- id: kepez
+  name: Kepez
+  lon: 30.713
+  lat: 36.93
+  expect: inside
+  role: descriptive
+  note: Reported only. Approximate district centre, not an official centroid.
+  inside: true
+  passed: true
+- id: dosemealti
+  name: Döşemealtı
+  lon: 30.5903
+  lat: 37.0236
+  expect: inside
+  role: descriptive
+  note: Reported only. The district is large; this point may sit outside the dense
+    stop cluster.
+  inside: false
+  passed: false
+- id: aksu
+  name: Aksu
+  lon: 30.848
+  lat: 36.947
+  expect: inside
+  role: descriptive
+  note: Reported only.
+  inside: false
+  passed: false
+detached_pockets:
+- h3_cells: 8
+  stop_count: 101
+  example_stop_names:
+  - YEŞİLBAYIR ATATÜRK CD-1
+  - YEŞİLBAYIR ATATÜRK CD-2
+  - YEŞİLBAYIR ATATÜRK CD-3
+  - NAMIK KEMAL CD-5
+  - NAMIK KEMAL CD-6
+  - NAMIK KEMAL CD-3
+  - NAMIK KEMAL CD-4
+  - YEŞİLBAYIR ATATÜRK CD-68
+- h3_cells: 9
+  stop_count: 84
+  example_stop_names:
+  - YENİKÖY ATATÜRK CD-26
+  - İNÖNÜ CD-1
+  - İNÖNÜ CD-12
+  - YENİKÖY ATATÜRK CD-45
+  - YENİKÖY ATATÜRK CD-43
+  - YENİKÖY ATATÜRK CD-44
+  - YENİKÖY ATATÜRK CD-27
+  - YENİKÖY ATATÜRK CD-28
+- h3_cells: 6
+  stop_count: 60
+  example_stop_names:
+  - ÇAKIRLAR KAPALI PAZARYERİ-1
+  - GİRNE CD-1
+  - GİRNE CD-2
+  - GİRNE CD-14
+  - GİRNE CD-15
+  - ÇAKIRLAR KAPALI PAZARYERİ-2
+  - DEPO SK-3
+  - DEPO SK-4
+- h3_cells: 2
+  stop_count: 27
+  example_stop_names:
+  - BAHÇEYAKA ATATÜRK BLV-20
+  - BAHÇEYAKA ATATÜRK BLV-21
+  - ŞEHİT AHMET KÜÇÜKADALI CD-1
+  - ŞEHİT AHMET KÜÇÜKADALI CD-2
+  - ŞEHİT AHMET KÜÇÜKADALI CD-10
+  - BAHÇEYAKA ATATÜRK BLV-50
+  - BAHÇEYAKA ATATÜRK BLV-51
+  - KIRKGÖZ CD-8
+- h3_cells: 2
+  stop_count: 18
+  example_stop_names:
+  - KUMLUCA ADNAN MENDERES BLV-3
+  - -AHMET ALİ AĞA BLV. 13
+  - KUMLUCA AHMET ALİ AĞA BLV-9
+  - KUMLUCA AHMET ALİ AĞA BLV-8
+  - KUMLUCA ADNAN MENDERES BLV-2
+  - -HALİL ÇILGIN CAD.1
+  - -ADNAN MENDERES BUL.3
+  - KUMLUCA ADNAN MENDERES BLV-4
+- h3_cells: 2
+  stop_count: 17
+  example_stop_names:
+  - HACISEKİLİLER-1
+  - HACISEKİLİLER-2
+  - HACISEKİLİLER-3
+  - HACISEKİLİLER-4
+  - HACISEKİLİLER-23
+  - HACISEKİLİLER-24
+  - HACISEKİLİLER-25
+  - HACISEKİLİLER-26
+- h3_cells: 2
+  stop_count: 16
+  example_stop_names:
+  - AKSU DEPOLAMA
+  - AKSU MEVLANA CD-3
+  - AKSU 101 SK-1
+  - AKSU OKULLAR BÖLGESİ-4
+  - AKSU 101 SK-2
+  - AKSU MEVLANA CD-1
+  - AKSU OKULLAR BÖLGESİ-1
+  - AKSU MEVLANA CD-2
+- h3_cells: 1
+  stop_count: 16
+  example_stop_names:
+  - D400 FİNİKE ŞERBETÇİ BLV-2
+  - FİNİKE YAYLA BLV-2
+  - FİNİKE YAYLA BLV-8
+  - FİNİKE YAYLA BLV-9
+  - DEMRE KÖŞKERLER MH-3
+  - D400 DEMRE DALYAN BLV-2
+  - D400 FİNİKE ŞERBETÇİ BLV-4
+  - D400 FİNİKE ŞERBETÇİ BLV-5
+- h3_cells: 2
+  stop_count: 15
+  example_stop_names:
+  - KÖMÜRCÜLER MH-4
+  - KÖMÜRCÜLER MH-5
+  - KÖMÜRCÜLER MH-6
+  - KÖMÜRCÜLER MH-8
+  - KÖMÜRCÜLER MH-9
+  - KÖMÜRCÜLER MH-10
+  - KÖMÜRCÜLER MH-11
+  - KÖMÜRCÜLER MH-12
+- h3_cells: 1
+  stop_count: 13
+  example_stop_names:
+  - AKDENİZ  BLV-1
+  - SARISU MH
+  - 122 SK-1
+  - 132 SK
+  - 138 SK-1
+  - 153 SK-1
+  - 153 SK-2
+  - 138 SK-2
+- h3_cells: 1
+  stop_count: 12
+  example_stop_names:
+  - ORGANİZE SANAYİ 22 CD-5
+  - ORGANİZE SANAYİ 22 CD-6
+  - ORGANİZE SANAYİ 24 CD-13
+  - ORGANİZE SANAYİ 24 CD-14
+  - ORGANİZE SANAYİ 24 CD-1
+  - ORGANİZE SANAYİ 22 CD-1
+  - ORGANİZE SANAYİ 22 CD-2
+  - ORGANİZE SANAYİ 24 CD-2
+- h3_cells: 1
+  stop_count: 10
+  example_stop_names:
+  - MANAVGAT ZÜBEYDE HANIM CD-1
+  - MANAVGAT ZÜBEYDE HANIM CD-2
+  - MANAVGAT ZÜBEYDE HANIM CD-3
+  - MANAVGAT İBRAHİM SÖZEN CD-1
+  - MANAVGAT İBRAHİM SÖZEN CD-3
+  - MANAVGAT İBRAHİM SÖZEN CD-6
+  - MANAVGAT İBRAHİM SÖZEN CD-7
+  - MANAVGAT ZÜBEYDE HANIM CD-4
+- h3_cells: 1
+  stop_count: 10
+  example_stop_names:
+  - KUNDU-5
+  - KUNDU-6
+  - KUNDU-7
+  - KUNDU-8
+  - KUNDU-9
+  - KUNDU-10
+  - KUNDU-12
+  - KUNDU-13
+- h3_cells: 1
+  stop_count: 10
+  example_stop_names:
+  - KONYAALTI ATATÜRK CD-6
+  - KONYAALTI ATATÜRK CD-7
+  - KONYAALTI ATATÜRK CD-8
+  - KONYAALTI ATATÜRK CD-9
+  - KONYAALTI ATATÜRK CD-20
+  - KONYAALTI ATATÜRK CD-21
+  - KONYAALTI ATATÜRK CD-22
+  - KONYAALTI ATATÜRK CD-23
+- h3_cells: 1
+  stop_count: 9
+  example_stop_names:
+  - YARBAŞÇANDIR YOLU 2
+  - YARBAŞÇANDIR YOLU 3
+  - YARBAŞÇANDIR YOLU 4
+  - YARBAŞÇANDIR YOLU 5
+  - YARBAŞÇANDIR-5
+  - YARBAŞÇANDIR-2
+  - YARBAŞÇANDIR YOLU 6
+  - YARBAŞÇANDIR YOLU 7
+- h3_cells: 1
+  stop_count: 9
+  example_stop_names:
+  - AŞAĞIKARAMAN-7
+  - AŞAĞIKARAMAN-8
+  - AŞAĞIKARAMAN-9
+  - AŞAĞIKARAMAN-10
+  - AŞAĞIKARAMAN-11
+  - AŞAĞIKARAMAN-12
+  - AŞAĞIKARAMAN-13
+  - AŞAĞIKARAMAN-14
+- h3_cells: 1
+  stop_count: 9
+  example_stop_names:
+  - ORHAN GAZİ CD-1
+  - ORHAN GAZİ CD-4
+  - ANTALYA DENİZLİ KARAYOLU-4
+  - ANTALYA DENİZLİ KARAYOLU-5
+  - ANTALYA DENİZLİ KARAYOLU-6
+  - ANTALYA DENİZLİ KARAYOLU-25
+  - ANTALYA DENİZLİ KARAYOLU-26
+  - ANTALYA DENİZLİ KARAYOLU-27
+- h3_cells: 1
+  stop_count: 8
+  example_stop_names:
+  - AKSU ATATÜRK BLV-54
+  - AKSU ATATÜRK BLV-21
+  - AKSU ATATÜRK BLV-22
+  - AKSU ATATÜRK BLV-23
+  - AKSU ATATÜRK BLV-30
+  - AKSU ATATÜRK BLV-31
+  - AKSU ATATÜRK BLV-32
+  - AKSU ATATÜRK BLV-53
+- h3_cells: 1
+  stop_count: 8
+  example_stop_names:
+  - ODABAŞI MH-12
+  - ODABAŞI MH-6
+  - ODABAŞI MH-7
+  - ODABAŞI MH-16
+  - ODABAŞI MH-15
+  - ODABAŞI MH-10
+  - ODABAŞI MH-11
+  - ODABAŞI MH-9
+- h3_cells: 1
+  stop_count: 8
+  example_stop_names:
+  - ANTALYA DENİZLİ KARAYOLU-1
+  - ANTALYA DENİZLİ KARAYOLU-31
+  - AŞIR AKSU DEVLET HASTANESİ
+  - D650 AKDENİZ BLV-37
+  - D650 AKDENİZ BLV-38
+  - D650 AKDENİZ BLV-1
+  - KEPEZ CD-6
+  - KEPEZ CD-4
+- h3_cells: 1
+  stop_count: 8
+  example_stop_names:
+  - AYANLAR MH-1
+  - AYANLAR MH-2
+  - AYANLAR MH-3
+  - AYANLAR MH-4
+  - AYANLAR MH-5
+  - AYANLAR MH-6
+  - AYANLAR MH-7
+  - AYANLAR MH-8
+- h3_cells: 1
+  stop_count: 7
+  example_stop_names:
+  - MURATPAŞA LARA CD-14
+  - MURATPAŞA LARA CD-15
+  - MURATPAŞA LARA CD-16
+  - MURATPAŞA LARA CD-8
+  - MURATPAŞA LARA CD-9
+  - MURATPAŞA LARA CD-10
+  - MURATPAŞA LARA CD-11
+- h3_cells: 1
+  stop_count: 7
+  example_stop_names:
+  - ALTINKALE PALMİYE CD-9
+  - ODABAŞI MH-18
+  - ODABAŞI MH-20
+  - ODABAŞI MH-21
+  - ODABAŞI MH-22
+  - ODABAŞI MH-19
+  - ODABAŞI MH-17
+- h3_cells: 1
+  stop_count: 7
+  example_stop_names:
+  - HACISEKİLİLER-8
+  - HACISEKİLİLER-9
+  - HACISEKİLİLER-10
+  - HACISEKİLİLER-17
+  - HACISEKİLİLER-18
+  - HACISEKİLİLER-19
+  - HACISEKİLİLER-20
+- h3_cells: 1
+  stop_count: 7
+  example_stop_names:
+  - KUMLUCA TEMEL EGITIM ATATURK CD-4
+  - KUMLUCA TEMEL EGITIM ATATURK CD-5
+  - KUMLUCA TEMEL EGITIM ATATURK CD-6
+  - KUMLUCA BAYSI CD-1
+  - KUMLUCA ORNEK SK-1
+  - KUMLUCA ORNEK SK-2
+  - KUMLUCA GODENE CD-7
+- h3_cells: 1
+  stop_count: 7
+  example_stop_names:
+  - ANTALYA DENİZLİ KARAYOLU-12
+  - ANTALYA DENİZLİ KARAYOLU-13
+  - ANTALYA DENİZLİ KARAYOLU-14
+  - ANTALYA DENİZLİ KARAYOLU-17
+  - ANTALYA DENİZLİ KARAYOLU-18
+  - ANTALYA DENİZLİ KARAYOLU-19
+  - ANTALYA DENİZLİ KARAYOLU-20
+- h3_cells: 1
+  stop_count: 7
+  example_stop_names:
+  - ORTA MH-8
+  - ORTA MH-1
+  - ORTA MH-2
+  - ORTA MH-3
+  - ORTA MH-5
+  - ORTA MH-6
+  - ORTA MH-7

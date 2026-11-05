@@ -1,0 +1,24 @@
+{
+  "id": "antalya-kentkart-gtfs",
+  "name": "Antalya public transport GTFS (KentKart-derived)",
+  "organization": "Schedule data via KentKart; GTFS conversion by Egezenn/kk-gtfs",
+  "source_url": "https://github.com/Egezenn/kk-gtfs/raw/main/data/antalya.zip",
+  "converter_repository": "https://github.com/Egezenn/kk-gtfs",
+  "retrieved_at": "2026-09-29T20:24:20.922716+00:00",
+  "license": "Unclear for redistribution. Converter code is MIT. A CC0 text is shipped with the generated files, and the converter README says the underlying data remain with KentKart and/or the municipal operator.",
+  "format": "GTFS zip",
+  "content_sha256": "caff3834e75be575d2f19992b38c5650446747d38e7f026a7e5a2572ab7c145a",
+  "byte_size": 8960583,
+  "geographic_coverage": "Feed stop bbox longitude 29.32007 to 32.31751, latitude 36.20068 to 37.23487. Phase 1 study area covers 237.0 km\u00b2 and 2794 of 4630 valid stops.",
+  "temporal_coverage": "calendar.txt stamps services from 20260901 to 20261031. This window is produced by the converter unless an official feed replaces it.",
+  "processing_notes": "Downloaded from the published kk-gtfs zip and extracted without editing GTFS files. The study-area polygon and route register are separate project decisions.",
+  "limitations": [
+    "Derived from the public KentKart API by the community converter Egezenn/kk-gtfs. This is not an official Antalya B\u00fcy\u00fck\u015fehir GTFS publication.",
+    "The converter stamps calendar.txt from the generation date to 60 days later. That window is not evidence of the operator's validity period.",
+    "Intermediate stop times are the API's arrival and departure offsets added to each trip's first departure. They are scheduled inputs, not observed running times. A spot-check of 20 municipal timetable patterns is stored in reports/timetable_spot_check.html.",
+    "The feed's stop bbox extends beyond central Antalya, including provincial places such as Ka\u015f and Gazipa\u015fa. Those places are not the Phase 1 study area.",
+    "Services absent from this feed, including dolmu\u015f, are not represented.",
+    "Wheelchair_boarding and wheelchair_accessible fields are absent.",
+    "The converter's README says underlying schedule copyright remains with KentKart and/or the municipality, while also attaching a CC0 text to the generated files. The zip is not committed to git."
+  ]
+}

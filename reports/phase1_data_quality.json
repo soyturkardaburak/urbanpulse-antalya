@@ -1,0 +1,1615 @@
+{
+  "phase": 1,
+  "accessibility_calculated": false,
+  "distinction": "Issues below are data-quality or coverage findings. They are not measurements of public-transport accessibility.",
+  "generated_at": "2026-09-29T20:24:39.516009+00:00",
+  "dataset": {
+    "id": "antalya-kentkart-gtfs",
+    "name": "Antalya public transport GTFS (KentKart-derived)",
+    "organization": "Schedule data via KentKart; GTFS conversion by Egezenn/kk-gtfs",
+    "source_url": "https://github.com/Egezenn/kk-gtfs/raw/main/data/antalya.zip",
+    "converter_repository": "https://github.com/Egezenn/kk-gtfs",
+    "retrieved_at": "2026-09-29T20:24:20.922716+00:00",
+    "license": "Unclear for redistribution. Converter code is MIT. A CC0 text is shipped with the generated files, and the converter README says the underlying data remain with KentKart and/or the municipal operator.",
+    "format": "GTFS zip",
+    "content_sha256": "caff3834e75be575d2f19992b38c5650446747d38e7f026a7e5a2572ab7c145a",
+    "byte_size": 8960583,
+    "geographic_coverage": "Feed stop bbox longitude 29.32007 to 32.31751, latitude 36.20068 to 37.23487. Phase 1 study area covers 237.0 km\u00b2 and 2794 of 4630 valid stops.",
+    "temporal_coverage": "calendar.txt stamps services from 20260901 to 20261031. This window is produced by the converter unless an official feed replaces it.",
+    "processing_notes": "Downloaded from the published kk-gtfs zip and extracted without editing GTFS files. The study-area polygon and route register are separate project decisions.",
+    "limitations": [
+      "Derived from the public KentKart API by the community converter Egezenn/kk-gtfs. This is not an official Antalya B\u00fcy\u00fck\u015fehir GTFS publication.",
+      "The converter stamps calendar.txt from the generation date to 60 days later. That window is not evidence of the operator's validity period.",
+      "Intermediate stop times are the API's arrival and departure offsets added to each trip's first departure. They are scheduled inputs, not observed running times. A spot-check of 20 municipal timetable patterns is stored in reports/timetable_spot_check.html.",
+      "The feed's stop bbox extends beyond central Antalya, including provincial places such as Ka\u015f and Gazipa\u015fa. Those places are not the Phase 1 study area.",
+      "Services absent from this feed, including dolmu\u015f, are not represented.",
+      "Wheelchair_boarding and wheelchair_accessible fields are absent.",
+      "The converter's README says underlying schedule copyright remains with KentKart and/or the municipality, while also attaching a CC0 text to the generated files. The zip is not committed to git."
+    ]
+  },
+  "counts": {
+    "agencies": 2,
+    "routes": 169,
+    "stops": 4630,
+    "valid_stops": 4630,
+    "trips": 22034,
+    "stop_times": 1297130,
+    "shapes": 336,
+    "calendar_services": 3
+  },
+  "route_type_counts": {
+    "3": 164,
+    "0": 3,
+    "2": 2
+  },
+  "agencies": [
+    {
+      "agency_id": "1",
+      "agency_name": "ANTOB\u00dcS 12MT",
+      "agency_url": "https://www.kentkart.com/",
+      "agency_timezone": "Europe/Istanbul",
+      "route_count": 159
+    },
+    {
+      "agency_id": "99",
+      "agency_name": "TEST",
+      "agency_url": "https://www.kentkart.com/",
+      "agency_timezone": "Europe/Istanbul",
+      "route_count": 10
+    }
+  ],
+  "calendar": [
+    {
+      "service_id": "service_1_MTWTFss",
+      "monday": "1",
+      "tuesday": "1",
+      "wednesday": "1",
+      "thursday": "1",
+      "friday": "1",
+      "saturday": "0",
+      "sunday": "0",
+      "start_date": "20260901",
+      "end_date": "20261031",
+      "day_label": "Monday, Tuesday, Wednesday, Thursday, Friday",
+      "trip_count": 7992
+    },
+    {
+      "service_id": "service_2_mtwtfSs",
+      "monday": "0",
+      "tuesday": "0",
+      "wednesday": "0",
+      "thursday": "0",
+      "friday": "0",
+      "saturday": "1",
+      "sunday": "0",
+      "start_date": "20260901",
+      "end_date": "20261031",
+      "day_label": "Saturday",
+      "trip_count": 7497
+    },
+    {
+      "service_id": "service_3_mtwtfsS",
+      "monday": "0",
+      "tuesday": "0",
+      "wednesday": "0",
+      "thursday": "0",
+      "friday": "0",
+      "saturday": "0",
+      "sunday": "1",
+      "start_date": "20260901",
+      "end_date": "20261031",
+      "day_label": "Sunday",
+      "trip_count": 6545
+    }
+  ],
+  "bbox": {
+    "min_lon": 29.320068,
+    "min_lat": 36.200684,
+    "max_lon": 32.3175112,
+    "max_lat": 37.234866
+  },
+  "study_area": {
+    "id": "antalya_central",
+    "sane": true,
+    "area_km2": 237.03,
+    "stops_inside": 2794,
+    "stops_outside": 1836,
+    "parameters": {
+      "h3_resolution": 8,
+      "count_percentile": 75,
+      "minimum_stop_count": 5,
+      "buffer_m": 400,
+      "hole_filling": "Interior rings of the density union are removed before the buffer.",
+      "component": "Connected component, among cells at or above the threshold, that contains the densest cell.",
+      "tie_break": "Highest stop count, then lexicographic H3 index.",
+      "why_this_resolution": "Resolution 8 is used only to delineate the dense service area. A finer cell often contains too few stops for a density threshold. This is not the Phase 2 accessibility lattice."
+    },
+    "computed": {
+      "occupied_cells": 883,
+      "p50_stops_per_occupied_cell": 3.0,
+      "p75_stops_per_occupied_cell": 7.0,
+      "p90_stops_per_occupied_cell": 13.0,
+      "threshold_stops": 7,
+      "core_cells": 193,
+      "densest_cell_stops": 38,
+      "area_km2_before_buffer": 179.57,
+      "area_km2": 237.03
+    },
+    "control_points": [
+      {
+        "id": "kaleici",
+        "name": "Kalei\u00e7i",
+        "lon": 30.7056,
+        "lat": 36.8841,
+        "expect": "inside",
+        "role": "required",
+        "note": "Historic centre of Antalya. A dense-service study area that misses this point is not the central urban network.",
+        "inside": true,
+        "passed": true
+      },
+      {
+        "id": "kas",
+        "name": "Ka\u015f",
+        "lon": 29.6384,
+        "lat": 36.1997,
+        "expect": "outside",
+        "role": "required",
+        "note": "Provincial town on the GTFS fringe. It must not enter the central comparison area.",
+        "inside": false,
+        "passed": true
+      },
+      {
+        "id": "gazipasa",
+        "name": "Gazipa\u015fa",
+        "lon": 32.3142,
+        "lat": 36.2697,
+        "expect": "outside",
+        "role": "required",
+        "note": "Eastern provincial fringe of this feed. It must not enter the central comparison area.",
+        "inside": false,
+        "passed": true
+      },
+      {
+        "id": "airport",
+        "name": "Antalya Airport",
+        "lon": 30.8005,
+        "lat": 36.8987,
+        "expect": "inside",
+        "role": "descriptive",
+        "note": "Reported only. Failure does not by itself reject the polygon.",
+        "inside": false,
+        "passed": false
+      },
+      {
+        "id": "konyaalti",
+        "name": "Konyaalt\u0131",
+        "lon": 30.638,
+        "lat": 36.859,
+        "expect": "inside",
+        "role": "descriptive",
+        "note": "Reported only.",
+        "inside": true,
+        "passed": true
+      },
+      {
+        "id": "kepez",
+        "name": "Kepez",
+        "lon": 30.713,
+        "lat": 36.93,
+        "expect": "inside",
+        "role": "descriptive",
+        "note": "Reported only. Approximate district centre, not an official centroid.",
+        "inside": true,
+        "passed": true
+      },
+      {
+        "id": "dosemealti",
+        "name": "D\u00f6\u015femealt\u0131",
+        "lon": 30.5903,
+        "lat": 37.0236,
+        "expect": "inside",
+        "role": "descriptive",
+        "note": "Reported only. The district is large; this point may sit outside the dense stop cluster.",
+        "inside": false,
+        "passed": false
+      },
+      {
+        "id": "aksu",
+        "name": "Aksu",
+        "lon": 30.848,
+        "lat": 36.947,
+        "expect": "inside",
+        "role": "descriptive",
+        "note": "Reported only.",
+        "inside": false,
+        "passed": false
+      }
+    ],
+    "detached_pockets": [
+      {
+        "h3_cells": 8,
+        "stop_count": 101,
+        "example_stop_names": [
+          "YE\u015e\u0130LBAYIR ATAT\u00dcRK CD-1",
+          "YE\u015e\u0130LBAYIR ATAT\u00dcRK CD-2",
+          "YE\u015e\u0130LBAYIR ATAT\u00dcRK CD-3",
+          "NAMIK KEMAL CD-5",
+          "NAMIK KEMAL CD-6",
+          "NAMIK KEMAL CD-3",
+          "NAMIK KEMAL CD-4",
+          "YE\u015e\u0130LBAYIR ATAT\u00dcRK CD-68"
+        ]
+      },
+      {
+        "h3_cells": 9,
+        "stop_count": 84,
+        "example_stop_names": [
+          "YEN\u0130K\u00d6Y ATAT\u00dcRK CD-26",
+          "\u0130N\u00d6N\u00dc CD-1",
+          "\u0130N\u00d6N\u00dc CD-12",
+          "YEN\u0130K\u00d6Y ATAT\u00dcRK CD-45",
+          "YEN\u0130K\u00d6Y ATAT\u00dcRK CD-43",
+          "YEN\u0130K\u00d6Y ATAT\u00dcRK CD-44",
+          "YEN\u0130K\u00d6Y ATAT\u00dcRK CD-27",
+          "YEN\u0130K\u00d6Y ATAT\u00dcRK CD-28"
+        ]
+      },
+      {
+        "h3_cells": 6,
+        "stop_count": 60,
+        "example_stop_names": [
+          "\u00c7AKIRLAR KAPALI PAZARYER\u0130-1",
+          "G\u0130RNE CD-1",
+          "G\u0130RNE CD-2",
+          "G\u0130RNE CD-14",
+          "G\u0130RNE CD-15",
+          "\u00c7AKIRLAR KAPALI PAZARYER\u0130-2",
+          "DEPO SK-3",
+          "DEPO SK-4"
+        ]
+      },
+      {
+        "h3_cells": 2,
+        "stop_count": 27,
+        "example_stop_names": [
+          "BAH\u00c7EYAKA ATAT\u00dcRK BLV-20",
+          "BAH\u00c7EYAKA ATAT\u00dcRK BLV-21",
+          "\u015eEH\u0130T AHMET K\u00dc\u00c7\u00dcKADALI CD-1",
+          "\u015eEH\u0130T AHMET K\u00dc\u00c7\u00dcKADALI CD-2",
+          "\u015eEH\u0130T AHMET K\u00dc\u00c7\u00dcKADALI CD-10",
+          "BAH\u00c7EYAKA ATAT\u00dcRK BLV-50",
+          "BAH\u00c7EYAKA ATAT\u00dcRK BLV-51",
+          "KIRKG\u00d6Z CD-8"
+        ]
+      },
+      {
+        "h3_cells": 2,
+        "stop_count": 18,
+        "example_stop_names": [
+          "KUMLUCA ADNAN MENDERES BLV-3",
+          "-AHMET AL\u0130 A\u011eA BLV. 13",
+          "KUMLUCA AHMET AL\u0130 A\u011eA BLV-9",
+          "KUMLUCA AHMET AL\u0130 A\u011eA BLV-8",
+          "KUMLUCA ADNAN MENDERES BLV-2",
+          "-HAL\u0130L \u00c7ILGIN CAD.1",
+          "-ADNAN MENDERES BUL.3",
+          "KUMLUCA ADNAN MENDERES BLV-4"
+        ]
+      },
+      {
+        "h3_cells": 2,
+        "stop_count": 17,
+        "example_stop_names": [
+          "HACISEK\u0130L\u0130LER-1",
+          "HACISEK\u0130L\u0130LER-2",
+          "HACISEK\u0130L\u0130LER-3",
+          "HACISEK\u0130L\u0130LER-4",
+          "HACISEK\u0130L\u0130LER-23",
+          "HACISEK\u0130L\u0130LER-24",
+          "HACISEK\u0130L\u0130LER-25",
+          "HACISEK\u0130L\u0130LER-26"
+        ]
+      },
+      {
+        "h3_cells": 2,
+        "stop_count": 16,
+        "example_stop_names": [
+          "AKSU DEPOLAMA",
+          "AKSU MEVLANA CD-3",
+          "AKSU 101 SK-1",
+          "AKSU OKULLAR B\u00d6LGES\u0130-4",
+          "AKSU 101 SK-2",
+          "AKSU MEVLANA CD-1",
+          "AKSU OKULLAR B\u00d6LGES\u0130-1",
+          "AKSU MEVLANA CD-2"
+        ]
+      },
+      {
+        "h3_cells": 1,
+        "stop_count": 16,
+        "example_stop_names": [
+          "D400 F\u0130N\u0130KE \u015eERBET\u00c7\u0130 BLV-2",
+          "F\u0130N\u0130KE YAYLA BLV-2",
+          "F\u0130N\u0130KE YAYLA BLV-8",
+          "F\u0130N\u0130KE YAYLA BLV-9",
+          "DEMRE K\u00d6\u015eKERLER MH-3",
+          "D400 DEMRE DALYAN BLV-2",
+          "D400 F\u0130N\u0130KE \u015eERBET\u00c7\u0130 BLV-4",
+          "D400 F\u0130N\u0130KE \u015eERBET\u00c7\u0130 BLV-5"
+        ]
+      },
+      {
+        "h3_cells": 2,
+        "stop_count": 15,
+        "example_stop_names": [
+          "K\u00d6M\u00dcRC\u00dcLER MH-4",
+          "K\u00d6M\u00dcRC\u00dcLER MH-5",
+          "K\u00d6M\u00dcRC\u00dcLER MH-6",
+          "K\u00d6M\u00dcRC\u00dcLER MH-8",
+          "K\u00d6M\u00dcRC\u00dcLER MH-9",
+          "K\u00d6M\u00dcRC\u00dcLER MH-10",
+          "K\u00d6M\u00dcRC\u00dcLER MH-11",
+          "K\u00d6M\u00dcRC\u00dcLER MH-12"
+        ]
+      },
+      {
+        "h3_cells": 1,
+        "stop_count": 13,
+        "example_stop_names": [
+          "AKDEN\u0130Z  BLV-1",
+          "SARISU MH",
+          "122 SK-1",
+          "132 SK",
+          "138 SK-1",
+          "153 SK-1",
+          "153 SK-2",
+          "138 SK-2"
+        ]
+      },
+      {
+        "h3_cells": 1,
+        "stop_count": 12,
+        "example_stop_names": [
+          "ORGAN\u0130ZE SANAY\u0130 22 CD-5",
+          "ORGAN\u0130ZE SANAY\u0130 22 CD-6",
+          "ORGAN\u0130ZE SANAY\u0130 24 CD-13",
+          "ORGAN\u0130ZE SANAY\u0130 24 CD-14",
+          "ORGAN\u0130ZE SANAY\u0130 24 CD-1",
+          "ORGAN\u0130ZE SANAY\u0130 22 CD-1",
+          "ORGAN\u0130ZE SANAY\u0130 22 CD-2",
+          "ORGAN\u0130ZE SANAY\u0130 24 CD-2"
+        ]
+      },
+      {
+        "h3_cells": 1,
+        "stop_count": 10,
+        "example_stop_names": [
+          "MANAVGAT Z\u00dcBEYDE HANIM CD-1",
+          "MANAVGAT Z\u00dcBEYDE HANIM CD-2",
+          "MANAVGAT Z\u00dcBEYDE HANIM CD-3",
+          "MANAVGAT \u0130BRAH\u0130M S\u00d6ZEN CD-1",
+          "MANAVGAT \u0130BRAH\u0130M S\u00d6ZEN CD-3",
+          "MANAVGAT \u0130BRAH\u0130M S\u00d6ZEN CD-6",
+          "MANAVGAT \u0130BRAH\u0130M S\u00d6ZEN CD-7",
+          "MANAVGAT Z\u00dcBEYDE HANIM CD-4"
+        ]
+      },
+      {
+        "h3_cells": 1,
+        "stop_count": 10,
+        "example_stop_names": [
+          "KUNDU-5",
+          "KUNDU-6",
+          "KUNDU-7",
+          "KUNDU-8",
+          "KUNDU-9",
+          "KUNDU-10",
+          "KUNDU-12",
+          "KUNDU-13"
+        ]
+      },
+      {
+        "h3_cells": 1,
+        "stop_count": 10,
+        "example_stop_names": [
+          "KONYAALTI ATAT\u00dcRK CD-6",
+          "KONYAALTI ATAT\u00dcRK CD-7",
+          "KONYAALTI ATAT\u00dcRK CD-8",
+          "KONYAALTI ATAT\u00dcRK CD-9",
+          "KONYAALTI ATAT\u00dcRK CD-20",
+          "KONYAALTI ATAT\u00dcRK CD-21",
+          "KONYAALTI ATAT\u00dcRK CD-22",
+          "KONYAALTI ATAT\u00dcRK CD-23"
+        ]
+      },
+      {
+        "h3_cells": 1,
+        "stop_count": 9,
+        "example_stop_names": [
+          "YARBA\u015e\u00c7ANDIR YOLU 2",
+          "YARBA\u015e\u00c7ANDIR YOLU 3",
+          "YARBA\u015e\u00c7ANDIR YOLU 4",
+          "YARBA\u015e\u00c7ANDIR YOLU 5",
+          "YARBA\u015e\u00c7ANDIR-5",
+          "YARBA\u015e\u00c7ANDIR-2",
+          "YARBA\u015e\u00c7ANDIR YOLU 6",
+          "YARBA\u015e\u00c7ANDIR YOLU 7"
+        ]
+      },
+      {
+        "h3_cells": 1,
+        "stop_count": 9,
+        "example_stop_names": [
+          "A\u015eA\u011eIKARAMAN-7",
+          "A\u015eA\u011eIKARAMAN-8",
+          "A\u015eA\u011eIKARAMAN-9",
+          "A\u015eA\u011eIKARAMAN-10",
+          "A\u015eA\u011eIKARAMAN-11",
+          "A\u015eA\u011eIKARAMAN-12",
+          "A\u015eA\u011eIKARAMAN-13",
+          "A\u015eA\u011eIKARAMAN-14"
+        ]
+      },
+      {
+        "h3_cells": 1,
+        "stop_count": 9,
+        "example_stop_names": [
+          "ORHAN GAZ\u0130 CD-1",
+          "ORHAN GAZ\u0130 CD-4",
+          "ANTALYA DEN\u0130ZL\u0130 KARAYOLU-4",
+          "ANTALYA DEN\u0130ZL\u0130 KARAYOLU-5",
+          "ANTALYA DEN\u0130ZL\u0130 KARAYOLU-6",
+          "ANTALYA DEN\u0130ZL\u0130 KARAYOLU-25",
+          "ANTALYA DEN\u0130ZL\u0130 KARAYOLU-26",
+          "ANTALYA DEN\u0130ZL\u0130 KARAYOLU-27"
+        ]
+      },
+      {
+        "h3_cells": 1,
+        "stop_count": 8,
+        "example_stop_names": [
+          "AKSU ATAT\u00dcRK BLV-54",
+          "AKSU ATAT\u00dcRK BLV-21",
+          "AKSU ATAT\u00dcRK BLV-22",
+          "AKSU ATAT\u00dcRK BLV-23",
+          "AKSU ATAT\u00dcRK BLV-30",
+          "AKSU ATAT\u00dcRK BLV-31",
+          "AKSU ATAT\u00dcRK BLV-32",
+          "AKSU ATAT\u00dcRK BLV-53"
+        ]
+      },
+      {
+        "h3_cells": 1,
+        "stop_count": 8,
+        "example_stop_names": [
+          "ODABA\u015eI MH-12",
+          "ODABA\u015eI MH-6",
+          "ODABA\u015eI MH-7",
+          "ODABA\u015eI MH-16",
+          "ODABA\u015eI MH-15",
+          "ODABA\u015eI MH-10",
+          "ODABA\u015eI MH-11",
+          "ODABA\u015eI MH-9"
+        ]
+      },
+      {
+        "h3_cells": 1,
+        "stop_count": 8,
+        "example_stop_names": [
+          "ANTALYA DEN\u0130ZL\u0130 KARAYOLU-1",
+          "ANTALYA DEN\u0130ZL\u0130 KARAYOLU-31",
+          "A\u015eIR AKSU DEVLET HASTANES\u0130",
+          "D650 AKDEN\u0130Z BLV-37",
+          "D650 AKDEN\u0130Z BLV-38",
+          "D650 AKDEN\u0130Z BLV-1",
+          "KEPEZ CD-6",
+          "KEPEZ CD-4"
+        ]
+      },
+      {
+        "h3_cells": 1,
+        "stop_count": 8,
+        "example_stop_names": [
+          "AYANLAR MH-1",
+          "AYANLAR MH-2",
+          "AYANLAR MH-3",
+          "AYANLAR MH-4",
+          "AYANLAR MH-5",
+          "AYANLAR MH-6",
+          "AYANLAR MH-7",
+          "AYANLAR MH-8"
+        ]
+      },
+      {
+        "h3_cells": 1,
+        "stop_count": 7,
+        "example_stop_names": [
+          "MURATPA\u015eA LARA CD-14",
+          "MURATPA\u015eA LARA CD-15",
+          "MURATPA\u015eA LARA CD-16",
+          "MURATPA\u015eA LARA CD-8",
+          "MURATPA\u015eA LARA CD-9",
+          "MURATPA\u015eA LARA CD-10",
+          "MURATPA\u015eA LARA CD-11"
+        ]
+      },
+      {
+        "h3_cells": 1,
+        "stop_count": 7,
+        "example_stop_names": [
+          "ALTINKALE PALM\u0130YE CD-9",
+          "ODABA\u015eI MH-18",
+          "ODABA\u015eI MH-20",
+          "ODABA\u015eI MH-21",
+          "ODABA\u015eI MH-22",
+          "ODABA\u015eI MH-19",
+          "ODABA\u015eI MH-17"
+        ]
+      },
+      {
+        "h3_cells": 1,
+        "stop_count": 7,
+        "example_stop_names": [
+          "HACISEK\u0130L\u0130LER-8",
+          "HACISEK\u0130L\u0130LER-9",
+          "HACISEK\u0130L\u0130LER-10",
+          "HACISEK\u0130L\u0130LER-17",
+          "HACISEK\u0130L\u0130LER-18",
+          "HACISEK\u0130L\u0130LER-19",
+          "HACISEK\u0130L\u0130LER-20"
+        ]
+      },
+      {
+        "h3_cells": 1,
+        "stop_count": 7,
+        "example_stop_names": [
+          "KUMLUCA TEMEL EGITIM ATATURK CD-4",
+          "KUMLUCA TEMEL EGITIM ATATURK CD-5",
+          "KUMLUCA TEMEL EGITIM ATATURK CD-6",
+          "KUMLUCA BAYSI CD-1",
+          "KUMLUCA ORNEK SK-1",
+          "KUMLUCA ORNEK SK-2",
+          "KUMLUCA GODENE CD-7"
+        ]
+      },
+      {
+        "h3_cells": 1,
+        "stop_count": 7,
+        "example_stop_names": [
+          "ANTALYA DEN\u0130ZL\u0130 KARAYOLU-12",
+          "ANTALYA DEN\u0130ZL\u0130 KARAYOLU-13",
+          "ANTALYA DEN\u0130ZL\u0130 KARAYOLU-14",
+          "ANTALYA DEN\u0130ZL\u0130 KARAYOLU-17",
+          "ANTALYA DEN\u0130ZL\u0130 KARAYOLU-18",
+          "ANTALYA DEN\u0130ZL\u0130 KARAYOLU-19",
+          "ANTALYA DEN\u0130ZL\u0130 KARAYOLU-20"
+        ]
+      },
+      {
+        "h3_cells": 1,
+        "stop_count": 7,
+        "example_stop_names": [
+          "ORTA MH-8",
+          "ORTA MH-1",
+          "ORTA MH-2",
+          "ORTA MH-3",
+          "ORTA MH-5",
+          "ORTA MH-6",
+          "ORTA MH-7"
+        ]
+      }
+    ],
+    "bounds": [
+      30.583523270963,
+      36.8397218582388,
+      30.84842635779856,
+      37.00188294815033
+    ]
+  },
+  "route_decisions": {
+    "threshold": 0.8,
+    "rule": "A route is included when at least 80 percent of its valid stops lie inside the study area and it has at least two valid stops. Quality flags do not by themselves exclude a route.",
+    "included": 102,
+    "excluded": 67,
+    "sensitivity": {
+      "included_at_0.6": 111,
+      "included_at_0.8": 102,
+      "included_at_0.9": 84
+    },
+    "excluded_routes": [
+      {
+        "route_id": "00107",
+        "route_short_name": "107",
+        "route_long_name": "SARISU-KADINLAR PLAJI",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 2,
+        "n_stops_inside": 0,
+        "share_stops_inside": 0.0
+      },
+      {
+        "route_id": "05140",
+        "route_short_name": "514",
+        "route_long_name": "AKSU DEPOLAMA-KARA\u00d6Z",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 45,
+        "n_stops_inside": 0,
+        "share_stops_inside": 0.0
+      },
+      {
+        "route_id": "05141",
+        "route_short_name": "514A",
+        "route_long_name": "AKSU DEPOLAMA-YE\u015e\u0130LKARAMAN",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 45,
+        "n_stops_inside": 0,
+        "share_stops_inside": 0.0
+      },
+      {
+        "route_id": "05271",
+        "route_short_name": "527A",
+        "route_long_name": "AKSU-KUNDU",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 58,
+        "n_stops_inside": 0,
+        "share_stops_inside": 0.0
+      },
+      {
+        "route_id": "00050",
+        "route_short_name": "AC05",
+        "route_long_name": "AKSU-ALAYLI",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 37,
+        "n_stops_inside": 0,
+        "share_stops_inside": 0.0
+      },
+      {
+        "route_id": "00051",
+        "route_short_name": "AC05A",
+        "route_long_name": "AKSU-ALAYLI",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 41,
+        "n_stops_inside": 0,
+        "share_stops_inside": 0.0
+      },
+      {
+        "route_id": "00052",
+        "route_short_name": "AC05B",
+        "route_long_name": "AKSU-GULOLUK",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 51,
+        "n_stops_inside": 0,
+        "share_stops_inside": 0.0
+      },
+      {
+        "route_id": "00380",
+        "route_short_name": "BB38",
+        "route_long_name": "SARISU DEPOLAMA-BALIK\u00c7I BARINA\u011eI",
+        "agency_id": "99",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "agency_named_test",
+        "n_stops": 2,
+        "n_stops_inside": 0,
+        "share_stops_inside": 0.0
+      },
+      {
+        "route_id": "03330",
+        "route_short_name": "DA6",
+        "route_long_name": "ORGAN\u0130ZE SANAY\u0130-D\u00d6\u015eEMEALTI",
+        "agency_id": "99",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "agency_named_test",
+        "n_stops": 76,
+        "n_stops_inside": 0,
+        "share_stops_inside": 0.0
+      },
+      {
+        "route_id": "02220",
+        "route_short_name": "DA6A",
+        "route_long_name": "ORGAN\u0130ZE SANAY\u0130-D\u00d6\u015eEMEALTI",
+        "agency_id": "99",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "agency_named_test",
+        "n_stops": 69,
+        "n_stops_inside": 0,
+        "share_stops_inside": 0.0
+      },
+      {
+        "route_id": "16060",
+        "route_short_name": "FH06",
+        "route_long_name": "Finike Otogar-Hasyurt",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 50,
+        "n_stops_inside": 0,
+        "share_stops_inside": 0.0
+      },
+      {
+        "route_id": "16010",
+        "route_short_name": "FT01",
+        "route_long_name": "Finike Otogar-Turun\u00e7ova",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 24,
+        "n_stops_inside": 0,
+        "share_stops_inside": 0.0
+      },
+      {
+        "route_id": "11020",
+        "route_short_name": "GAL02",
+        "route_long_name": "Gazipa\u015fa Merkez-Alanya",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 62,
+        "n_stops_inside": 0,
+        "share_stops_inside": 0.0
+      },
+      {
+        "route_id": "18010",
+        "route_short_name": "HT01",
+        "route_long_name": "Kumluca Terminal-Temel Egitim",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 41,
+        "n_stops_inside": 0,
+        "share_stops_inside": 0.0
+      },
+      {
+        "route_id": "18020",
+        "route_short_name": "KF02",
+        "route_long_name": "Kumluca Otogar-Finike Otogar",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 70,
+        "n_stops_inside": 0,
+        "share_stops_inside": 0.0
+      },
+      {
+        "route_id": "00810",
+        "route_short_name": "MK81",
+        "route_long_name": "AKSU DEPOLAMA-TOPALLI",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 48,
+        "n_stops_inside": 0,
+        "share_stops_inside": 0.0
+      },
+      {
+        "route_id": "00811",
+        "route_short_name": "MK81A",
+        "route_long_name": "AKSU-YORUKLER MAHALLESI",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 58,
+        "n_stops_inside": 0,
+        "share_stops_inside": 0.0
+      },
+      {
+        "route_id": "33335",
+        "route_short_name": "T35",
+        "route_long_name": "10001 - AKDEN\u0130Z  BLV-1-10003 - AKDEN\u0130Z  BLV-3",
+        "agency_id": "99",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_2_stops",
+        "quality_flags": "agency_named_test;long_name_looks_like_stop_codes",
+        "n_stops": 0,
+        "n_stops_inside": 0,
+        "share_stops_inside": 0.0
+      },
+      {
+        "route_id": "99995",
+        "route_short_name": "T5",
+        "route_long_name": "10259 - TIP FAK\u00dcLTES\u0130-10001 - AKDEN\u0130Z  BLV-1",
+        "agency_id": "99",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_2_stops",
+        "quality_flags": "agency_named_test;long_name_looks_like_stop_codes",
+        "n_stops": 0,
+        "n_stops_inside": 0,
+        "share_stops_inside": 0.0
+      },
+      {
+        "route_id": "18090",
+        "route_short_name": "TC09",
+        "route_long_name": "Kumluca Terminal-Camk\u0131r\u0131\u011f\u0131",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 26,
+        "n_stops_inside": 0,
+        "share_stops_inside": 0.0
+      },
+      {
+        "route_id": "18080",
+        "route_short_name": "TH08",
+        "route_long_name": "Kumluca Terminal-Kavakk\u00f6y",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 13,
+        "n_stops_inside": 0,
+        "share_stops_inside": 0.0
+      },
+      {
+        "route_id": "18030",
+        "route_short_name": "TO03",
+        "route_long_name": "Kumluca Terminal-Ortak\u00f6y",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 31,
+        "n_stops_inside": 0,
+        "share_stops_inside": 0.0
+      },
+      {
+        "route_id": "18050",
+        "route_short_name": "TS05",
+        "route_long_name": "Kumluca Terminal-Salur",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 15,
+        "n_stops_inside": 0,
+        "share_stops_inside": 0.0
+      },
+      {
+        "route_id": "18120",
+        "route_short_name": "TT12",
+        "route_long_name": "Kumluca Terminal-Turun\u00e7ova",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 17,
+        "n_stops_inside": 0,
+        "share_stops_inside": 0.0
+      },
+      {
+        "route_id": "16050",
+        "route_short_name": "TYF05",
+        "route_long_name": "Devlet Hastanesi-Turun\u00e7ova \u00e7ar\u015f\u0131",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 22,
+        "n_stops_inside": 0,
+        "share_stops_inside": 0.0
+      },
+      {
+        "route_id": "01901",
+        "route_short_name": "D19A",
+        "route_long_name": "ORGAN\u0130ZE SANAY\u0130-SEH\u0130R HASTANES\u0130",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 116,
+        "n_stops_inside": 2,
+        "share_stops_inside": 0.017241
+      },
+      {
+        "route_id": "01900",
+        "route_short_name": "D19",
+        "route_long_name": "ORGAN\u0130ZE-SEH\u0130R HASTANES\u0130",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 115,
+        "n_stops_inside": 2,
+        "share_stops_inside": 0.017391
+      },
+      {
+        "route_id": "14010",
+        "route_short_name": "EA01",
+        "route_long_name": "Antalya Terminal-Elmal\u0131 Terminal",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 43,
+        "n_stops_inside": 6,
+        "share_stops_inside": 0.139535
+      },
+      {
+        "route_id": "17010",
+        "route_short_name": "AA01",
+        "route_long_name": "Alanya Otogar-Antalya Otogar",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 87,
+        "n_stops_inside": 13,
+        "share_stops_inside": 0.149425
+      },
+      {
+        "route_id": "00270",
+        "route_short_name": "DC27",
+        "route_long_name": "OTOGAR DEPOLAMA-BADEMAGACI",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 142,
+        "n_stops_inside": 22,
+        "share_stops_inside": 0.15493
+      },
+      {
+        "route_id": "00851",
+        "route_short_name": "DM85A",
+        "route_long_name": "OTOGAR DEPOLAMA-EKSILI",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 132,
+        "n_stops_inside": 22,
+        "share_stops_inside": 0.166667
+      },
+      {
+        "route_id": "00850",
+        "route_short_name": "DM85",
+        "route_long_name": "OTOGAR DEPOLAMA-K\u0130LL\u0130K",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 218,
+        "n_stops_inside": 41,
+        "share_stops_inside": 0.188073
+      },
+      {
+        "route_id": "00860",
+        "route_short_name": "DM86",
+        "route_long_name": "OTOGAR DEPOLAMA-KARAVELILER",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 187,
+        "n_stops_inside": 42,
+        "share_stops_inside": 0.224599
+      },
+      {
+        "route_id": "05090",
+        "route_short_name": "509",
+        "route_long_name": "OTOGAR DEPOLAMA-KIRISCILER",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 172,
+        "n_stops_inside": 42,
+        "share_stops_inside": 0.244186
+      },
+      {
+        "route_id": "05213",
+        "route_short_name": "521C",
+        "route_long_name": "SARISU DEPOLAMA-GEY\u0130KBAYIRI",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 86,
+        "n_stops_inside": 21,
+        "share_stops_inside": 0.244186
+      },
+      {
+        "route_id": "00790",
+        "route_short_name": "DC79",
+        "route_long_name": "DOSEMEALTI-SIGORTA",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 134,
+        "n_stops_inside": 34,
+        "share_stops_inside": 0.253731
+      },
+      {
+        "route_id": "05270",
+        "route_short_name": "527",
+        "route_long_name": "AKSU-KUNDU",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 95,
+        "n_stops_inside": 25,
+        "share_stops_inside": 0.263158
+      },
+      {
+        "route_id": "30030",
+        "route_short_name": "AK03",
+        "route_long_name": "Antalya Terminal-K\u0131n\u0131k",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 155,
+        "n_stops_inside": 42,
+        "share_stops_inside": 0.270968
+      },
+      {
+        "route_id": "15220",
+        "route_short_name": "BA22",
+        "route_long_name": "Bo\u011fazkent-Antalya",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 69,
+        "n_stops_inside": 24,
+        "share_stops_inside": 0.347826
+      },
+      {
+        "route_id": "00150",
+        "route_short_name": "DC15",
+        "route_long_name": "MEYDAN-DOSEMEALTI",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 178,
+        "n_stops_inside": 63,
+        "share_stops_inside": 0.353933
+      },
+      {
+        "route_id": "05212",
+        "route_short_name": "521B",
+        "route_long_name": "OTOGAR-HACISEKILILER-KUM MEVKII",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 127,
+        "n_stops_inside": 46,
+        "share_stops_inside": 0.362205
+      },
+      {
+        "route_id": "20080",
+        "route_short_name": "TA08",
+        "route_long_name": "Tekirova Kav\u015fak-Antalya Otogar",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 99,
+        "n_stops_inside": 36,
+        "share_stops_inside": 0.363636
+      },
+      {
+        "route_id": "11010",
+        "route_short_name": "GAN01",
+        "route_long_name": "Gazipa\u015fa Merkez-Antalya Terminal",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 16,
+        "n_stops_inside": 6,
+        "share_stops_inside": 0.375
+      },
+      {
+        "route_id": "05061",
+        "route_short_name": "506A",
+        "route_long_name": "MEYDAN-YA\u011eCA",
+        "agency_id": "99",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "agency_named_test",
+        "n_stops": 192,
+        "n_stops_inside": 73,
+        "share_stops_inside": 0.380208
+      },
+      {
+        "route_id": "00151",
+        "route_short_name": "DC15A",
+        "route_long_name": "MEYDAN-DOSEMEALTI",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 191,
+        "n_stops_inside": 73,
+        "share_stops_inside": 0.382199
+      },
+      {
+        "route_id": "10010",
+        "route_short_name": "AK01",
+        "route_long_name": "Korkuteli Terminal-Antalya Otogar\u0131",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 26,
+        "n_stops_inside": 10,
+        "share_stops_inside": 0.384615
+      },
+      {
+        "route_id": "00703",
+        "route_short_name": "AB07",
+        "route_long_name": "ORGAN\u0130ZE SANAY\u0130-AKDEN\u0130Z \u00dcN\u0130VERS\u0130TES\u0130",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 77,
+        "n_stops_inside": 30,
+        "share_stops_inside": 0.38961
+      },
+      {
+        "route_id": "05210",
+        "route_short_name": "521",
+        "route_long_name": "OTOGAR DEPOLAMA-FESL\u0130KAN YAYLASI",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 127,
+        "n_stops_inside": 52,
+        "share_stops_inside": 0.409449
+      },
+      {
+        "route_id": "05211",
+        "route_short_name": "521A",
+        "route_long_name": "OTOGAR DEPOLAMA-AKDAMLAR",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 110,
+        "n_stops_inside": 46,
+        "share_stops_inside": 0.418182
+      },
+      {
+        "route_id": "00201",
+        "route_short_name": "SD20A",
+        "route_long_name": "SARISU DEPOLAMA-DOSEMEALTI",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 232,
+        "n_stops_inside": 102,
+        "share_stops_inside": 0.439655
+      },
+      {
+        "route_id": "05060",
+        "route_short_name": "506",
+        "route_long_name": "MEYDAN DEPOLAMA-YAGCA",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 187,
+        "n_stops_inside": 83,
+        "share_stops_inside": 0.44385
+      },
+      {
+        "route_id": "00200",
+        "route_short_name": "SD20",
+        "route_long_name": "SARISU-ORGANIZE SANAYI",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 236,
+        "n_stops_inside": 105,
+        "share_stops_inside": 0.444915
+      },
+      {
+        "route_id": "13470",
+        "route_short_name": "MAN47",
+        "route_long_name": "Manavgat Otogar\u0131-Antalya Otogar\u0131",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 110,
+        "n_stops_inside": 51,
+        "share_stops_inside": 0.463636
+      },
+      {
+        "route_id": "20070",
+        "route_short_name": "KA07",
+        "route_long_name": "Kemer Terminal-Antalya Terminal",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 69,
+        "n_stops_inside": 32,
+        "share_stops_inside": 0.463768
+      },
+      {
+        "route_id": "02430",
+        "route_short_name": "VY24",
+        "route_long_name": "VARSAK YAYLASI-VARSAK",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 77,
+        "n_stops_inside": 36,
+        "share_stops_inside": 0.467532
+      },
+      {
+        "route_id": "05151",
+        "route_short_name": "515A",
+        "route_long_name": "OTOGAR DEPOLAMA-SOGUTCUMASI",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 174,
+        "n_stops_inside": 88,
+        "share_stops_inside": 0.505747
+      },
+      {
+        "route_id": "00510",
+        "route_short_name": "TK51",
+        "route_long_name": "OTOGAR DEPOLAMA-AKDAMLAR",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 169,
+        "n_stops_inside": 90,
+        "share_stops_inside": 0.532544
+      },
+      {
+        "route_id": "00511",
+        "route_short_name": "TK51A",
+        "route_long_name": "OTOGAR DEPOLAMA-DOYRAN",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 146,
+        "n_stops_inside": 87,
+        "share_stops_inside": 0.59589
+      },
+      {
+        "route_id": "05280",
+        "route_short_name": "528",
+        "route_long_name": "AKSU-GUZELOBA",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 107,
+        "n_stops_inside": 67,
+        "share_stops_inside": 0.626168
+      },
+      {
+        "route_id": "05110",
+        "route_short_name": "511",
+        "route_long_name": "OTOGAR DEPOLAMA-KUNDU",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 201,
+        "n_stops_inside": 127,
+        "share_stops_inside": 0.631841
+      },
+      {
+        "route_id": "00250",
+        "route_short_name": "MD25",
+        "route_long_name": "MEYDAN DEPOLAMA-DOYRAN",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 133,
+        "n_stops_inside": 97,
+        "share_stops_inside": 0.729323
+      },
+      {
+        "route_id": "00071",
+        "route_short_name": "LC07A",
+        "route_long_name": "KUNDU-OTOGAR DEPOLAMA",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 185,
+        "n_stops_inside": 136,
+        "share_stops_inside": 0.735135
+      },
+      {
+        "route_id": "15190",
+        "route_short_name": "SA19",
+        "route_long_name": "Serik-Antalya",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 93,
+        "n_stops_inside": 70,
+        "share_stops_inside": 0.752688
+      },
+      {
+        "route_id": "05080",
+        "route_short_name": "508",
+        "route_long_name": "VARSAK-CAMLICA-KIZILLI",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 61,
+        "n_stops_inside": 46,
+        "share_stops_inside": 0.754098
+      },
+      {
+        "route_id": "00800",
+        "route_short_name": "MK80",
+        "route_long_name": "KUR\u015eUNLU \u015eELALES\u0130-DEMIRCILER",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 98,
+        "n_stops_inside": 74,
+        "share_stops_inside": 0.755102
+      },
+      {
+        "route_id": "05070",
+        "route_short_name": "507",
+        "route_long_name": "VARSAK-KIRISCILER-KIZILLI",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 58,
+        "n_stops_inside": 46,
+        "share_stops_inside": 0.793103
+      },
+      {
+        "route_id": "00041",
+        "route_short_name": "AF04A",
+        "route_long_name": "AKSU-BANIO KAV\u015eA\u011eI",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "fewer_than_80_percent_of_stops_inside_study_area",
+        "quality_flags": "",
+        "n_stops": 112,
+        "n_stops_inside": 89,
+        "share_stops_inside": 0.794643
+      }
+    ],
+    "flagged_included_routes": [
+      {
+        "route_id": "09010",
+        "route_short_name": "T1B",
+        "route_long_name": "FAT\u0130H-EXPO",
+        "agency_id": "1",
+        "route_type": "2",
+        "exclude_reason": "",
+        "quality_flags": "gtfs_route_type_2",
+        "n_stops": 56,
+        "n_stops_inside": 50,
+        "share_stops_inside": 0.892857
+      },
+      {
+        "route_id": "09020",
+        "route_short_name": "T1A",
+        "route_long_name": "FAT\u0130H-HAVAL\u0130MANI",
+        "agency_id": "1",
+        "route_type": "2",
+        "exclude_reason": "",
+        "quality_flags": "gtfs_route_type_2",
+        "n_stops": 50,
+        "n_stops_inside": 46,
+        "share_stops_inside": 0.92
+      },
+      {
+        "route_id": "09040",
+        "route_short_name": "T1C",
+        "route_long_name": "FAT\u0130H-AKSU",
+        "agency_id": "99",
+        "route_type": "0",
+        "exclude_reason": "",
+        "quality_flags": "agency_named_test;gtfs_route_type_0",
+        "n_stops": 54,
+        "n_stops_inside": 50,
+        "share_stops_inside": 0.925926
+      },
+      {
+        "route_id": "01140",
+        "route_short_name": "114",
+        "route_long_name": "\u015eEH\u0130R HASTANES\u0130-FAT\u0130H",
+        "agency_id": "99",
+        "route_type": "3",
+        "exclude_reason": "",
+        "quality_flags": "agency_named_test",
+        "n_stops": 24,
+        "n_stops_inside": 24,
+        "share_stops_inside": 1.0
+      },
+      {
+        "route_id": "00580",
+        "route_short_name": "MC58",
+        "route_long_name": "OTOGAR-FATIH TRAMVAY",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "",
+        "quality_flags": "gtfs_type_bus_but_name_suggests_tram",
+        "n_stops": 117,
+        "n_stops_inside": 117,
+        "share_stops_inside": 1.0
+      },
+      {
+        "route_id": "00680",
+        "route_short_name": "MC68",
+        "route_long_name": "OTOGAR DEPOLAMA-FATIH TRAMVAY",
+        "agency_id": "1",
+        "route_type": "3",
+        "exclude_reason": "",
+        "quality_flags": "gtfs_type_bus_but_name_suggests_tram",
+        "n_stops": 100,
+        "n_stops_inside": 100,
+        "share_stops_inside": 1.0
+      },
+      {
+        "route_id": "03100",
+        "route_short_name": "NT07",
+        "route_long_name": "NOSTALJ\u0130 TRAMVAY AMBARI-M\u00dcZE",
+        "agency_id": "99",
+        "route_type": "3",
+        "exclude_reason": "",
+        "quality_flags": "agency_named_test;gtfs_type_bus_but_name_suggests_tram",
+        "n_stops": 27,
+        "n_stops_inside": 27,
+        "share_stops_inside": 1.0
+      },
+      {
+        "route_id": "09050",
+        "route_short_name": "T1D",
+        "route_long_name": "FAT\u0130H-KI\u015eLA",
+        "agency_id": "99",
+        "route_type": "0",
+        "exclude_reason": "",
+        "quality_flags": "agency_named_test;gtfs_route_type_0",
+        "n_stops": 34,
+        "n_stops_inside": 34,
+        "share_stops_inside": 1.0
+      },
+      {
+        "route_id": "09030",
+        "route_short_name": "T3",
+        "route_long_name": "VARSAK-M\u00dcZE",
+        "agency_id": "1",
+        "route_type": "0",
+        "exclude_reason": "",
+        "quality_flags": "gtfs_route_type_0",
+        "n_stops": 58,
+        "n_stops_inside": 58,
+        "share_stops_inside": 1.0
+      }
+    ]
+  },
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "departure_before_arrival",
+      "message": "Departure time is earlier than arrival time. 1347 of these differ by 60 seconds or less. Phase 1 records them and does not rewrite the feed.",
+      "count": 1531,
+      "samples": [
+        {
+          "trip_id": "1391470-1",
+          "stop_id": "13999",
+          "arrival_time": "08:40:05",
+          "departure_time": "08:40:00",
+          "stop_sequence": "41"
+        },
+        {
+          "trip_id": "1391471-1",
+          "stop_id": "13999",
+          "arrival_time": "11:40:05",
+          "departure_time": "11:40:00",
+          "stop_sequence": "41"
+        },
+        {
+          "trip_id": "1391472-1",
+          "stop_id": "13999",
+          "arrival_time": "14:40:05",
+          "departure_time": "14:40:00",
+          "stop_sequence": "41"
+        },
+        {
+          "trip_id": "1391473-1",
+          "stop_id": "13999",
+          "arrival_time": "17:50:05",
+          "departure_time": "17:50:00",
+          "stop_sequence": "41"
+        },
+        {
+          "trip_id": "1391474-1",
+          "stop_id": "13999",
+          "arrival_time": "20:40:05",
+          "departure_time": "20:40:00",
+          "stop_sequence": "41"
+        }
+      ]
+    },
+    {
+      "severity": "warning",
+      "code": "calendar_window_looks_like_generator_default",
+      "message": "Every service shares the window 20260901 to 20261031 (60 days). The KentKart converter writes the generation date and a date 60 days later. Treat this as a feed stamp, not as the operator's published validity period, until it is compared with an official timetable.",
+      "count": 3,
+      "samples": [
+        {
+          "start_date": "20260901",
+          "end_date": "20261031",
+          "span_days": 60
+        }
+      ]
+    },
+    {
+      "severity": "warning",
+      "code": "holiday_exceptions_absent",
+      "message": "calendar_dates.txt is not in this feed. Public holidays inside the stamped window are not encoded.",
+      "count": 1,
+      "samples": []
+    },
+    {
+      "severity": "info",
+      "code": "transfers_table_absent",
+      "message": "transfers.txt is not in this feed. Phase 1 does not infer transfer rules.",
+      "count": 1,
+      "samples": []
+    },
+    {
+      "severity": "info",
+      "code": "wheelchair_fields_absent",
+      "message": "This feed has no wheelchair_boarding or wheelchair_accessible fields. Step-free access cannot be assessed.",
+      "count": 1,
+      "samples": []
+    }
+  ]
+}

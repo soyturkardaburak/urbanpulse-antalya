@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Antalya timetable spot-check</title>
+<style>
+body { font-family: sans-serif; margin: 2rem; line-height: 1.45; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border-bottom: 1px solid #ccc; text-align: left; padding: 0.35rem; vertical-align: top; }
+</style>
+</head>
+<body>
+<h1>Timetable spot-check</h1>
+<p>One gidiş pattern was requested per route and day. Agreement uses the first, middle, and last shared stops, ordered by GTFS stop_sequence, with a tolerance of 60 seconds. The page is not a full-day timetable.</p>
+<p><strong>Interpret hospital times:</strong> Yes. 14 of 16 comparable Wednesday patterns passed (0.88).</p>
+<p>Hospital times may be interpreted only when every Wednesday fetch succeeds, at least 12 Wednesday patterns are comparable, and at least 80% of those pass.</p>
+<p>Checked at 2026-10-17T20:42:20.380227+00:00. Source: https://ulasim.antalya.bel.tr/Home/TarifeListesi.</p>
+<table>
+<thead><tr><th>Route</th><th>Day</th><th>Role</th><th>Status</th><th>GTFS trip</th><th>First delta (s)</th><th>Middle delta (s)</th><th>Last delta (s)</th><th>Detail</th></tr></thead>
+<tbody>
+<tr><td>998</td><td>Wednesday</td><td>included_short_central_bus</td><td>pass</td><td>997381-1</td><td>0</td><td>-10</td><td>-10</td><td>First, middle, and last shared stops are within 60 seconds.</td></tr><tr><td>VF01</td><td>Wednesday</td><td>included_fully_inside_bus</td><td>fail</td><td>1403802-1</td><td>-5</td><td>63</td><td>55</td><td>At least one of the first, middle, or last shared stops differs by more than 60 seconds.</td></tr><tr><td>KL08</td><td>Wednesday</td><td>included_long_urban_bus</td><td>pass</td><td>1409618-1</td><td>-5</td><td>-5</td><td>55</td><td>First, middle, and last shared stops are within 60 seconds.</td></tr><tr><td>UC32</td><td>Wednesday</td><td>included_urban_bus</td><td>fail</td><td>1402720-1</td><td>-5</td><td>68</td><td>11</td><td>At least one of the first, middle, or last shared stops differs by more than 60 seconds.</td></tr><tr><td>KF52</td><td>Wednesday</td><td>included_urban_bus</td><td>pass</td><td>1412872-1</td><td>-5</td><td>-5</td><td>-5</td><td>First, middle, and last shared stops are within 60 seconds.</td></tr><tr><td>600</td><td>Wednesday</td><td>included_airport_bus</td><td>pass</td><td>1361806-1</td><td>0</td><td>-5</td><td>56</td><td>First, middle, and last shared stops are within 60 seconds.</td></tr><tr><td>800</td><td>Wednesday</td><td>included_airport_bus</td><td>pass</td><td>1353100-1</td><td>-5</td><td>-5</td><td>-5</td><td>First, middle, and last shared stops are within 60 seconds.</td></tr><tr><td>T1A</td><td>Wednesday</td><td>included_flagged_route_type</td><td>pass</td><td>1326049-1</td><td>0</td><td>-20</td><td>-20</td><td>First, middle, and last shared stops are within 60 seconds.</td></tr><tr><td>T1B</td><td>Wednesday</td><td>included_flagged_route_type</td><td>pass</td><td>1325776-1</td><td>0</td><td>-20</td><td>-20</td><td>First, middle, and last shared stops are within 60 seconds.</td></tr><tr><td>T1C</td><td>Wednesday</td><td>included_flagged_route_type</td><td>pass</td><td>1326260-1</td><td>-20</td><td>-20</td><td>-20</td><td>First, middle, and last shared stops are within 60 seconds.</td></tr><tr><td>T3</td><td>Wednesday</td><td>included_flagged_route_type</td><td>pass</td><td>1374043-1</td><td>0</td><td>-20</td><td>-20</td><td>First, middle, and last shared stops are within 60 seconds.</td></tr><tr><td>AA01</td><td>Wednesday</td><td>excluded_intercity</td><td>pass</td><td>863251-1</td><td>-10</td><td>-10</td><td>-10</td><td>First, middle, and last shared stops are within 60 seconds.</td></tr><tr><td>AK03</td><td>Wednesday</td><td>excluded_intercity</td><td>pass</td><td>865353-1</td><td>-10</td><td>-10</td><td>-10</td><td>First, middle, and last shared stops are within 60 seconds.</td></tr><tr><td>GAN01</td><td>Wednesday</td><td>excluded_intercity</td><td>pass</td><td>1195841-1</td><td>-10</td><td>-10</td><td>0</td><td>First, middle, and last shared stops are within 60 seconds.</td></tr><tr><td>MAN47</td><td>Wednesday</td><td>excluded_intercity</td><td>pass</td><td>1305019-1</td><td>-10</td><td>-10</td><td>-10</td><td>First, middle, and last shared stops are within 60 seconds.</td></tr><tr><td>SA19</td><td>Wednesday</td><td>excluded_below_80_percent</td><td>pass</td><td>420959-1</td><td>-10</td><td>-10</td><td>-10</td><td>First, middle, and last shared stops are within 60 seconds.</td></tr><tr><td>998</td><td>Saturday</td><td>saturday_repeat</td><td>pass</td><td>997413-2</td><td>0</td><td>-10</td><td>-10</td><td>First, middle, and last shared stops are within 60 seconds.</td></tr><tr><td>T1A</td><td>Saturday</td><td>saturday_repeat</td><td>pass</td><td>1325988-2</td><td>0</td><td>-20</td><td>-20</td><td>First, middle, and last shared stops are within 60 seconds.</td></tr><tr><td>VF01</td><td>Saturday</td><td>saturday_repeat</td><td>fail</td><td>1403483-2</td><td>-5</td><td>63</td><td>55</td><td>At least one of the first, middle, or last shared stops differs by more than 60 seconds.</td></tr><tr><td>KL08</td><td>Saturday</td><td>saturday_repeat</td><td>pass</td><td>1409697-2</td><td>-5</td><td>-5</td><td>55</td><td>First, middle, and last shared stops are within 60 seconds.</td></tr>
+</tbody>
+</table>
+<h2>Saturday against Wednesday</h2>
+<p>This compares the first shared stop of the single published pattern. It is not proof that the whole Saturday timetable differs.</p>
+<table>
+<thead><tr><th>Route</th><th>Wednesday first time</th><th>Saturday first time</th><th>Delta (s)</th><th>Same first stop</th></tr></thead>
+<tbody>
+<tr><td>998</td><td>07:30:00</td><td>07:30:00</td><td>0</td><td>True</td></tr><tr><td>KL08</td><td>05:45:00</td><td>05:45:00</td><td>0</td><td>True</td></tr><tr><td>T1A</td><td>24:05:00</td><td>24:05:00</td><td>0</td><td>True</td></tr><tr><td>VF01</td><td>06:45:00</td><td>06:45:00</td><td>0</td><td>True</td></tr>
+</tbody>
+</table>
+</body>
+</html>

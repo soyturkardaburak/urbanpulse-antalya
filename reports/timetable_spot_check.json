@@ -1,0 +1,1195 @@
+{
+  "checked_at": "2026-10-17T20:42:20.380227+00:00",
+  "source_url": "https://ulasim.antalya.bel.tr/Home/TarifeListesi",
+  "method": "One gidiş pattern was requested per route and day. Agreement uses the first, middle, and last shared stops, ordered by GTFS stop_sequence, with a tolerance of 60 seconds. The page is not a full-day timetable.",
+  "interpretation_rule": "Hospital times may be interpreted only when every Wednesday fetch succeeds, at least 12 Wednesday patterns are comparable, and at least 80% of those pass.",
+  "interpretation_allowed": true,
+  "interpretation_reason": "14 of 16 comparable Wednesday patterns passed (0.88).",
+  "patterns": [
+    {
+      "route_short_name": "998",
+      "day": "Wednesday",
+      "day_code": 3,
+      "role": "included_short_central_bus",
+      "service_id": "service_1_MTWTFss",
+      "direction": "Gidiş",
+      "official_route_value": "9980",
+      "published_direction_values": [
+        "Gidiş"
+      ],
+      "status": "pass",
+      "gtfs_trip_id": "997381-1",
+      "pattern_name": "MÜZE - ZERDALİLİK",
+      "published_stops": 9,
+      "shared_stops": 9,
+      "exact_stop_times": 1,
+      "anchors": {
+        "first": {
+          "stop_id": "15055",
+          "stop_name": "MÜZE 1",
+          "published_time": "07:30:00",
+          "stop_sequence": 1,
+          "gtfs_departure_seconds": 27000,
+          "delta_seconds": 0
+        },
+        "middle": {
+          "stop_id": "15061",
+          "stop_name": "KALE KAPI 2",
+          "published_time": "07:42:30",
+          "stop_sequence": 5,
+          "gtfs_departure_seconds": 27760,
+          "delta_seconds": -10
+        },
+        "last": {
+          "stop_id": "15068",
+          "stop_name": "ZERDALİLİK",
+          "published_time": "07:55:10",
+          "stop_sequence": 9,
+          "gtfs_departure_seconds": 28520,
+          "delta_seconds": -10
+        }
+      },
+      "detail": "First, middle, and last shared stops are within 60 seconds.",
+      "first_stop_id": "15055",
+      "first_stop_name": "MÜZE 1",
+      "first_published_time": "07:30:00",
+      "first_delta_seconds": 0,
+      "middle_stop_id": "15061",
+      "middle_stop_name": "KALE KAPI 2",
+      "middle_published_time": "07:42:30",
+      "middle_delta_seconds": -10,
+      "last_stop_id": "15068",
+      "last_stop_name": "ZERDALİLİK",
+      "last_published_time": "07:55:10",
+      "last_delta_seconds": -10
+    },
+    {
+      "route_short_name": "VF01",
+      "day": "Wednesday",
+      "day_code": 3,
+      "role": "included_fully_inside_bus",
+      "service_id": "service_1_MTWTFss",
+      "direction": "Gidiş",
+      "official_route_value": "10",
+      "published_direction_values": [
+        "Gidiş"
+      ],
+      "status": "fail",
+      "gtfs_trip_id": "1403802-1",
+      "pattern_name": "FAKÜLTE - VARSAK ALTIAYAK",
+      "published_stops": 60,
+      "shared_stops": 59,
+      "exact_stop_times": 0,
+      "anchors": {
+        "first": {
+          "stop_id": "12343",
+          "stop_name": "75 YIL CD-1",
+          "published_time": "06:45:00",
+          "stop_sequence": 1,
+          "gtfs_departure_seconds": 24305,
+          "delta_seconds": -5
+        },
+        "middle": {
+          "stop_id": "10974",
+          "stop_name": "YEŞİLIRMAK CD-19",
+          "published_time": "07:18:53",
+          "stop_sequence": 30,
+          "gtfs_departure_seconds": 26270,
+          "delta_seconds": 63
+        },
+        "last": {
+          "stop_id": "13008",
+          "stop_name": "ALTIAYAK DEPOLAMA",
+          "published_time": "07:51:00",
+          "stop_sequence": 59,
+          "gtfs_departure_seconds": 28205,
+          "delta_seconds": 55
+        }
+      },
+      "detail": "At least one of the first, middle, or last shared stops differs by more than 60 seconds.",
+      "first_stop_id": "12343",
+      "first_stop_name": "75 YIL CD-1",
+      "first_published_time": "06:45:00",
+      "first_delta_seconds": -5,
+      "middle_stop_id": "10974",
+      "middle_stop_name": "YEŞİLIRMAK CD-19",
+      "middle_published_time": "07:18:53",
+      "middle_delta_seconds": 63,
+      "last_stop_id": "13008",
+      "last_stop_name": "ALTIAYAK DEPOLAMA",
+      "last_published_time": "07:51:00",
+      "last_delta_seconds": 55
+    },
+    {
+      "route_short_name": "KL08",
+      "day": "Wednesday",
+      "day_code": 3,
+      "role": "included_long_urban_bus",
+      "service_id": "service_1_MTWTFss",
+      "direction": "Gidiş",
+      "official_route_value": "80",
+      "published_direction_values": [
+        "Gidiş"
+      ],
+      "status": "pass",
+      "gtfs_trip_id": "1409618-1",
+      "pattern_name": "GÜZELOBA - SARISU DEPOLAMA",
+      "published_stops": 91,
+      "shared_stops": 90,
+      "exact_stop_times": 0,
+      "anchors": {
+        "first": {
+          "stop_id": "13009",
+          "stop_name": "GÜZELOBA DEPOLAMA",
+          "published_time": "05:45:00",
+          "stop_sequence": 1,
+          "gtfs_departure_seconds": 20705,
+          "delta_seconds": -5
+        },
+        "middle": {
+          "stop_id": "10125",
+          "stop_name": "İSMET GÖKŞEN CD-10",
+          "published_time": "06:45:08",
+          "stop_sequence": 46,
+          "gtfs_departure_seconds": 24313,
+          "delta_seconds": -5
+        },
+        "last": {
+          "stop_id": "13001",
+          "stop_name": "SARISU DEPOLAMA MERKEZİ-1",
+          "published_time": "07:42:00",
+          "stop_sequence": 90,
+          "gtfs_departure_seconds": 27665,
+          "delta_seconds": 55
+        }
+      },
+      "detail": "First, middle, and last shared stops are within 60 seconds.",
+      "first_stop_id": "13009",
+      "first_stop_name": "GÜZELOBA DEPOLAMA",
+      "first_published_time": "05:45:00",
+      "first_delta_seconds": -5,
+      "middle_stop_id": "10125",
+      "middle_stop_name": "İSMET GÖKŞEN CD-10",
+      "middle_published_time": "06:45:08",
+      "middle_delta_seconds": -5,
+      "last_stop_id": "13001",
+      "last_stop_name": "SARISU DEPOLAMA MERKEZİ-1",
+      "last_published_time": "07:42:00",
+      "last_delta_seconds": 55
+    },
+    {
+      "route_short_name": "UC32",
+      "day": "Wednesday",
+      "day_code": 3,
+      "role": "included_urban_bus",
+      "service_id": "service_1_MTWTFss",
+      "direction": "Gidiş",
+      "official_route_value": "320",
+      "published_direction_values": [
+        "Gidiş"
+      ],
+      "status": "fail",
+      "gtfs_trip_id": "1402720-1",
+      "pattern_name": "DEMIRCILER CARSISI - SARISU",
+      "published_stops": 54,
+      "shared_stops": 53,
+      "exact_stop_times": 0,
+      "anchors": {
+        "first": {
+          "stop_id": "10149",
+          "stop_name": "ANDIZLI MEZARLIĞI",
+          "published_time": "07:05:00",
+          "stop_sequence": 1,
+          "gtfs_departure_seconds": 25505,
+          "delta_seconds": -5
+        },
+        "middle": {
+          "stop_id": "10408",
+          "stop_name": "GAZİ MUSTAFA KEMAL BLV-11",
+          "published_time": "07:37:48",
+          "stop_sequence": 27,
+          "gtfs_departure_seconds": 27400,
+          "delta_seconds": 68
+        },
+        "last": {
+          "stop_id": "13001",
+          "stop_name": "SARISU DEPOLAMA MERKEZİ-1",
+          "published_time": "08:09:16",
+          "stop_sequence": 54,
+          "gtfs_departure_seconds": 29345,
+          "delta_seconds": 11
+        }
+      },
+      "detail": "At least one of the first, middle, or last shared stops differs by more than 60 seconds.",
+      "first_stop_id": "10149",
+      "first_stop_name": "ANDIZLI MEZARLIĞI",
+      "first_published_time": "07:05:00",
+      "first_delta_seconds": -5,
+      "middle_stop_id": "10408",
+      "middle_stop_name": "GAZİ MUSTAFA KEMAL BLV-11",
+      "middle_published_time": "07:37:48",
+      "middle_delta_seconds": 68,
+      "last_stop_id": "13001",
+      "last_stop_name": "SARISU DEPOLAMA MERKEZİ-1",
+      "last_published_time": "08:09:16",
+      "last_delta_seconds": 11
+    },
+    {
+      "route_short_name": "KF52",
+      "day": "Wednesday",
+      "day_code": 3,
+      "role": "included_urban_bus",
+      "service_id": "service_1_MTWTFss",
+      "direction": "Gidiş",
+      "official_route_value": "520",
+      "published_direction_values": [
+        "Gidiş"
+      ],
+      "status": "pass",
+      "gtfs_trip_id": "1412872-1",
+      "pattern_name": "FATIH - SARISU",
+      "published_stops": 63,
+      "shared_stops": 63,
+      "exact_stop_times": 0,
+      "anchors": {
+        "first": {
+          "stop_id": "11298",
+          "stop_name": "ANTALYA BLV-11",
+          "published_time": "06:00:00",
+          "stop_sequence": 1,
+          "gtfs_departure_seconds": 21605,
+          "delta_seconds": -5
+        },
+        "middle": {
+          "stop_id": "12150",
+          "stop_name": "ULUSOY CD-5",
+          "published_time": "06:39:17",
+          "stop_sequence": 32,
+          "gtfs_departure_seconds": 23962,
+          "delta_seconds": -5
+        },
+        "last": {
+          "stop_id": "13001",
+          "stop_name": "SARISU DEPOLAMA MERKEZİ-1",
+          "published_time": "07:18:20",
+          "stop_sequence": 63,
+          "gtfs_departure_seconds": 26305,
+          "delta_seconds": -5
+        }
+      },
+      "detail": "First, middle, and last shared stops are within 60 seconds.",
+      "first_stop_id": "11298",
+      "first_stop_name": "ANTALYA BLV-11",
+      "first_published_time": "06:00:00",
+      "first_delta_seconds": -5,
+      "middle_stop_id": "12150",
+      "middle_stop_name": "ULUSOY CD-5",
+      "middle_published_time": "06:39:17",
+      "middle_delta_seconds": -5,
+      "last_stop_id": "13001",
+      "last_stop_name": "SARISU DEPOLAMA MERKEZİ-1",
+      "last_published_time": "07:18:20",
+      "last_delta_seconds": -5
+    },
+    {
+      "route_short_name": "600",
+      "day": "Wednesday",
+      "day_code": 3,
+      "role": "included_airport_bus",
+      "service_id": "service_1_MTWTFss",
+      "direction": "Gidiş",
+      "official_route_value": "6000",
+      "published_direction_values": [
+        "Gidiş"
+      ],
+      "status": "pass",
+      "gtfs_trip_id": "1361806-1",
+      "pattern_name": "HAVAALANI - OTOGAR ICI",
+      "published_stops": 41,
+      "shared_stops": 40,
+      "exact_stop_times": 1,
+      "anchors": {
+        "first": {
+          "stop_id": "14142",
+          "stop_name": "DIŞ HATLAR TERMİNALİ 2",
+          "published_time": "06:35:00",
+          "stop_sequence": 1,
+          "gtfs_departure_seconds": 23700,
+          "delta_seconds": 0
+        },
+        "middle": {
+          "stop_id": "10443",
+          "stop_name": "ALİ ÇETİNKAYA CD-2",
+          "published_time": "07:04:11",
+          "stop_sequence": 21,
+          "gtfs_departure_seconds": 25456,
+          "delta_seconds": -5
+        },
+        "last": {
+          "stop_id": "10828",
+          "stop_name": "OTOGAR İÇİ",
+          "published_time": "07:33:00",
+          "stop_sequence": 40,
+          "gtfs_departure_seconds": 27124,
+          "delta_seconds": 56
+        }
+      },
+      "detail": "First, middle, and last shared stops are within 60 seconds.",
+      "first_stop_id": "14142",
+      "first_stop_name": "DIŞ HATLAR TERMİNALİ 2",
+      "first_published_time": "06:35:00",
+      "first_delta_seconds": 0,
+      "middle_stop_id": "10443",
+      "middle_stop_name": "ALİ ÇETİNKAYA CD-2",
+      "middle_published_time": "07:04:11",
+      "middle_delta_seconds": -5,
+      "last_stop_id": "10828",
+      "last_stop_name": "OTOGAR İÇİ",
+      "last_published_time": "07:33:00",
+      "last_delta_seconds": 56
+    },
+    {
+      "route_short_name": "800",
+      "day": "Wednesday",
+      "day_code": 3,
+      "role": "included_airport_bus",
+      "service_id": "service_1_MTWTFss",
+      "direction": "Gidiş",
+      "official_route_value": "8000",
+      "published_direction_values": [
+        "Gidiş"
+      ],
+      "status": "pass",
+      "gtfs_trip_id": "1353100-1",
+      "pattern_name": "MEYDAN - SAMPI - HAVALIMANI",
+      "published_stops": 64,
+      "shared_stops": 64,
+      "exact_stop_times": 0,
+      "anchors": {
+        "first": {
+          "stop_id": "16350",
+          "stop_name": "MEYDAN DEPOLAMA MERKEZİ-4",
+          "published_time": "05:50:00",
+          "stop_sequence": 1,
+          "gtfs_departure_seconds": 21005,
+          "delta_seconds": -5
+        },
+        "middle": {
+          "stop_id": "10077",
+          "stop_name": "BARINAKLAR BLV-9",
+          "published_time": "06:23:00",
+          "stop_sequence": 33,
+          "gtfs_departure_seconds": 22985,
+          "delta_seconds": -5
+        },
+        "last": {
+          "stop_id": "14142",
+          "stop_name": "DIŞ HATLAR TERMİNALİ 2",
+          "published_time": "06:54:00",
+          "stop_sequence": 64,
+          "gtfs_departure_seconds": 24845,
+          "delta_seconds": -5
+        }
+      },
+      "detail": "First, middle, and last shared stops are within 60 seconds.",
+      "first_stop_id": "16350",
+      "first_stop_name": "MEYDAN DEPOLAMA MERKEZİ-4",
+      "first_published_time": "05:50:00",
+      "first_delta_seconds": -5,
+      "middle_stop_id": "10077",
+      "middle_stop_name": "BARINAKLAR BLV-9",
+      "middle_published_time": "06:23:00",
+      "middle_delta_seconds": -5,
+      "last_stop_id": "14142",
+      "last_stop_name": "DIŞ HATLAR TERMİNALİ 2",
+      "last_published_time": "06:54:00",
+      "last_delta_seconds": -5
+    },
+    {
+      "route_short_name": "T1A",
+      "day": "Wednesday",
+      "day_code": 3,
+      "role": "included_flagged_route_type",
+      "service_id": "service_1_MTWTFss",
+      "direction": "Gidiş",
+      "official_route_value": "9020",
+      "published_direction_values": [
+        "Gidiş"
+      ],
+      "status": "pass",
+      "gtfs_trip_id": "1326049-1",
+      "pattern_name": "HAVALİMANI DURAĞI - FATİH DURAĞI",
+      "published_stops": 25,
+      "shared_stops": 25,
+      "exact_stop_times": 1,
+      "anchors": {
+        "first": {
+          "stop_id": "15209",
+          "stop_name": "HAVALİMANI2",
+          "published_time": "24:05:00",
+          "stop_sequence": 1,
+          "gtfs_departure_seconds": 86700,
+          "delta_seconds": 0
+        },
+        "middle": {
+          "stop_id": "15185",
+          "stop_name": "İSMETPAŞA2",
+          "published_time": "24:36:00",
+          "stop_sequence": 13,
+          "gtfs_departure_seconds": 88580,
+          "delta_seconds": -20
+        },
+        "last": {
+          "stop_id": "15161",
+          "stop_name": "FATİH2",
+          "published_time": "25:03:00",
+          "stop_sequence": 25,
+          "gtfs_departure_seconds": 90200,
+          "delta_seconds": -20
+        }
+      },
+      "detail": "First, middle, and last shared stops are within 60 seconds.",
+      "first_stop_id": "15209",
+      "first_stop_name": "HAVALİMANI2",
+      "first_published_time": "24:05:00",
+      "first_delta_seconds": 0,
+      "middle_stop_id": "15185",
+      "middle_stop_name": "İSMETPAŞA2",
+      "middle_published_time": "24:36:00",
+      "middle_delta_seconds": -20,
+      "last_stop_id": "15161",
+      "last_stop_name": "FATİH2",
+      "last_published_time": "25:03:00",
+      "last_delta_seconds": -20
+    },
+    {
+      "route_short_name": "T1B",
+      "day": "Wednesday",
+      "day_code": 3,
+      "role": "included_flagged_route_type",
+      "service_id": "service_1_MTWTFss",
+      "direction": "Gidiş",
+      "official_route_value": "9010",
+      "published_direction_values": [
+        "Gidiş"
+      ],
+      "status": "pass",
+      "gtfs_trip_id": "1325776-1",
+      "pattern_name": "EXPO - FATİH DURAĞI",
+      "published_stops": 28,
+      "shared_stops": 28,
+      "exact_stop_times": 1,
+      "anchors": {
+        "first": {
+          "stop_id": "15217",
+          "stop_name": "EXPO2",
+          "published_time": "07:17:00",
+          "stop_sequence": 1,
+          "gtfs_departure_seconds": 26220,
+          "delta_seconds": 0
+        },
+        "middle": {
+          "stop_id": "15187",
+          "stop_name": "DOĞU GARAJ2",
+          "published_time": "07:51:00",
+          "stop_sequence": 15,
+          "gtfs_departure_seconds": 28280,
+          "delta_seconds": -20
+        },
+        "last": {
+          "stop_id": "15161",
+          "stop_name": "FATİH2",
+          "published_time": "08:21:00",
+          "stop_sequence": 28,
+          "gtfs_departure_seconds": 30080,
+          "delta_seconds": -20
+        }
+      },
+      "detail": "First, middle, and last shared stops are within 60 seconds.",
+      "first_stop_id": "15217",
+      "first_stop_name": "EXPO2",
+      "first_published_time": "07:17:00",
+      "first_delta_seconds": 0,
+      "middle_stop_id": "15187",
+      "middle_stop_name": "DOĞU GARAJ2",
+      "middle_published_time": "07:51:00",
+      "middle_delta_seconds": -20,
+      "last_stop_id": "15161",
+      "last_stop_name": "FATİH2",
+      "last_published_time": "08:21:00",
+      "last_delta_seconds": -20
+    },
+    {
+      "route_short_name": "T1C",
+      "day": "Wednesday",
+      "day_code": 3,
+      "role": "included_flagged_route_type",
+      "service_id": "service_1_MTWTFss",
+      "direction": "Gidiş",
+      "official_route_value": "9040",
+      "published_direction_values": [
+        "Gidiş"
+      ],
+      "status": "pass",
+      "gtfs_trip_id": "1326260-1",
+      "pattern_name": "AKSU DURAĞI-FATİH DURAĞI",
+      "published_stops": 27,
+      "shared_stops": 27,
+      "exact_stop_times": 0,
+      "anchors": {
+        "first": {
+          "stop_id": "15215",
+          "stop_name": "AKSU2",
+          "published_time": "06:21:00",
+          "stop_sequence": 1,
+          "gtfs_departure_seconds": 22880,
+          "delta_seconds": -20
+        },
+        "middle": {
+          "stop_id": "15187",
+          "stop_name": "DOĞU GARAJ2",
+          "published_time": "06:52:00",
+          "stop_sequence": 14,
+          "gtfs_departure_seconds": 24740,
+          "delta_seconds": -20
+        },
+        "last": {
+          "stop_id": "15161",
+          "stop_name": "FATİH2",
+          "published_time": "07:22:00",
+          "stop_sequence": 27,
+          "gtfs_departure_seconds": 26540,
+          "delta_seconds": -20
+        }
+      },
+      "detail": "First, middle, and last shared stops are within 60 seconds.",
+      "first_stop_id": "15215",
+      "first_stop_name": "AKSU2",
+      "first_published_time": "06:21:00",
+      "first_delta_seconds": -20,
+      "middle_stop_id": "15187",
+      "middle_stop_name": "DOĞU GARAJ2",
+      "middle_published_time": "06:52:00",
+      "middle_delta_seconds": -20,
+      "last_stop_id": "15161",
+      "last_stop_name": "FATİH2",
+      "last_published_time": "07:22:00",
+      "last_delta_seconds": -20
+    },
+    {
+      "route_short_name": "T3",
+      "day": "Wednesday",
+      "day_code": 3,
+      "role": "included_flagged_route_type",
+      "service_id": "service_1_MTWTFss",
+      "direction": "Gidiş",
+      "official_route_value": "9030",
+      "published_direction_values": [
+        "Gidiş"
+      ],
+      "status": "pass",
+      "gtfs_trip_id": "1374043-1",
+      "pattern_name": "MÜZE DURAĞI-VARSAK DURAĞI",
+      "published_stops": 29,
+      "shared_stops": 29,
+      "exact_stop_times": 1,
+      "anchors": {
+        "first": {
+          "stop_id": "15056",
+          "stop_name": "MÜZE 2",
+          "published_time": "06:25:00",
+          "stop_sequence": 1,
+          "gtfs_departure_seconds": 23100,
+          "delta_seconds": 0
+        },
+        "middle": {
+          "stop_id": "15130",
+          "stop_name": "KEPEZ BELEDİYE2",
+          "published_time": "06:52:00",
+          "stop_sequence": 15,
+          "gtfs_departure_seconds": 24740,
+          "delta_seconds": -20
+        },
+        "last": {
+          "stop_id": "15102",
+          "stop_name": "VARSAK2",
+          "published_time": "07:15:00",
+          "stop_sequence": 29,
+          "gtfs_departure_seconds": 26120,
+          "delta_seconds": -20
+        }
+      },
+      "detail": "First, middle, and last shared stops are within 60 seconds.",
+      "first_stop_id": "15056",
+      "first_stop_name": "MÜZE 2",
+      "first_published_time": "06:25:00",
+      "first_delta_seconds": 0,
+      "middle_stop_id": "15130",
+      "middle_stop_name": "KEPEZ BELEDİYE2",
+      "middle_published_time": "06:52:00",
+      "middle_delta_seconds": -20,
+      "last_stop_id": "15102",
+      "last_stop_name": "VARSAK2",
+      "last_published_time": "07:15:00",
+      "last_delta_seconds": -20
+    },
+    {
+      "route_short_name": "AA01",
+      "day": "Wednesday",
+      "day_code": 3,
+      "role": "excluded_intercity",
+      "service_id": "service_1_MTWTFss",
+      "direction": "Gidiş",
+      "official_route_value": "17010",
+      "published_direction_values": [
+        "Gidiş"
+      ],
+      "status": "pass",
+      "gtfs_trip_id": "863251-1",
+      "pattern_name": "Antalya-Alanya",
+      "published_stops": 46,
+      "shared_stops": 46,
+      "exact_stop_times": 0,
+      "anchors": {
+        "first": {
+          "stop_id": "40519",
+          "stop_name": "Antalya Terminali İlçe İndirme Peronu",
+          "published_time": "19:30:00",
+          "stop_sequence": 1,
+          "gtfs_departure_seconds": 70210,
+          "delta_seconds": -10
+        },
+        "middle": {
+          "stop_id": "44368",
+          "stop_name": "ALANYA OKURCALAR D400-12",
+          "published_time": "21:20:00",
+          "stop_sequence": 24,
+          "gtfs_departure_seconds": 76810,
+          "delta_seconds": -10
+        },
+        "last": {
+          "stop_id": "44995",
+          "stop_name": "Alanya Otogar",
+          "published_time": "21:55:00",
+          "stop_sequence": 46,
+          "gtfs_departure_seconds": 78910,
+          "delta_seconds": -10
+        }
+      },
+      "detail": "First, middle, and last shared stops are within 60 seconds.",
+      "first_stop_id": "40519",
+      "first_stop_name": "Antalya Terminali İlçe İndirme Peronu",
+      "first_published_time": "19:30:00",
+      "first_delta_seconds": -10,
+      "middle_stop_id": "44368",
+      "middle_stop_name": "ALANYA OKURCALAR D400-12",
+      "middle_published_time": "21:20:00",
+      "middle_delta_seconds": -10,
+      "last_stop_id": "44995",
+      "last_stop_name": "Alanya Otogar",
+      "last_published_time": "21:55:00",
+      "last_delta_seconds": -10
+    },
+    {
+      "route_short_name": "AK03",
+      "day": "Wednesday",
+      "day_code": 3,
+      "role": "excluded_intercity",
+      "service_id": "service_1_MTWTFss",
+      "direction": "Gidiş",
+      "official_route_value": "30030",
+      "published_direction_values": [
+        "Gidiş"
+      ],
+      "status": "pass",
+      "gtfs_trip_id": "865353-1",
+      "pattern_name": "Kınık-Antalya",
+      "published_stops": 76,
+      "shared_stops": 76,
+      "exact_stop_times": 0,
+      "anchors": {
+        "first": {
+          "stop_id": "43623",
+          "stop_name": "KAŞ KINIK ATATÜRK BLV",
+          "published_time": "07:15:00",
+          "stop_sequence": 1,
+          "gtfs_departure_seconds": 26110,
+          "delta_seconds": -10
+        },
+        "middle": {
+          "stop_id": "45085",
+          "stop_name": "KUMLUCA AHMET ALİ AĞA BLV-3",
+          "published_time": "09:51:00",
+          "stop_sequence": 39,
+          "gtfs_departure_seconds": 35470,
+          "delta_seconds": -10
+        },
+        "last": {
+          "stop_id": "40519",
+          "stop_name": "Antalya Terminali İlçe İndirme Peronu",
+          "published_time": "11:33:00",
+          "stop_sequence": 76,
+          "gtfs_departure_seconds": 41590,
+          "delta_seconds": -10
+        }
+      },
+      "detail": "First, middle, and last shared stops are within 60 seconds.",
+      "first_stop_id": "43623",
+      "first_stop_name": "KAŞ KINIK ATATÜRK BLV",
+      "first_published_time": "07:15:00",
+      "first_delta_seconds": -10,
+      "middle_stop_id": "45085",
+      "middle_stop_name": "KUMLUCA AHMET ALİ AĞA BLV-3",
+      "middle_published_time": "09:51:00",
+      "middle_delta_seconds": -10,
+      "last_stop_id": "40519",
+      "last_stop_name": "Antalya Terminali İlçe İndirme Peronu",
+      "last_published_time": "11:33:00",
+      "last_delta_seconds": -10
+    },
+    {
+      "route_short_name": "GAN01",
+      "day": "Wednesday",
+      "day_code": 3,
+      "role": "excluded_intercity",
+      "service_id": "service_1_MTWTFss",
+      "direction": "Gidiş",
+      "official_route_value": "11010",
+      "published_direction_values": [
+        "Gidiş"
+      ],
+      "status": "pass",
+      "gtfs_trip_id": "1195841-1",
+      "pattern_name": "Antalya-Gazipaşa",
+      "published_stops": 12,
+      "shared_stops": 12,
+      "exact_stop_times": 1,
+      "anchors": {
+        "first": {
+          "stop_id": "40519",
+          "stop_name": "Antalya Terminali İlçe İndirme Peronu",
+          "published_time": "09:30:00",
+          "stop_sequence": 1,
+          "gtfs_departure_seconds": 34210,
+          "delta_seconds": -10
+        },
+        "middle": {
+          "stop_id": "12448",
+          "stop_name": "SERİK CD-16",
+          "published_time": "10:05:00",
+          "stop_sequence": 7,
+          "gtfs_departure_seconds": 36310,
+          "delta_seconds": -10
+        },
+        "last": {
+          "stop_id": "41047",
+          "stop_name": "Gazipasa Merkez Duragı",
+          "published_time": "12:30:00",
+          "stop_sequence": 12,
+          "gtfs_departure_seconds": 45000,
+          "delta_seconds": 0
+        }
+      },
+      "detail": "First, middle, and last shared stops are within 60 seconds.",
+      "first_stop_id": "40519",
+      "first_stop_name": "Antalya Terminali İlçe İndirme Peronu",
+      "first_published_time": "09:30:00",
+      "first_delta_seconds": -10,
+      "middle_stop_id": "12448",
+      "middle_stop_name": "SERİK CD-16",
+      "middle_published_time": "10:05:00",
+      "middle_delta_seconds": -10,
+      "last_stop_id": "41047",
+      "last_stop_name": "Gazipasa Merkez Duragı",
+      "last_published_time": "12:30:00",
+      "last_delta_seconds": 0
+    },
+    {
+      "route_short_name": "MAN47",
+      "day": "Wednesday",
+      "day_code": 3,
+      "role": "excluded_intercity",
+      "service_id": "service_1_MTWTFss",
+      "direction": "Gidiş",
+      "official_route_value": "13470",
+      "published_direction_values": [
+        "Gidiş"
+      ],
+      "status": "pass",
+      "gtfs_trip_id": "1305019-1",
+      "pattern_name": "Antalya-Manavgat",
+      "published_stops": 66,
+      "shared_stops": 66,
+      "exact_stop_times": 1,
+      "anchors": {
+        "first": {
+          "stop_id": "40519",
+          "stop_name": "Antalya Terminali İlçe İndirme Peronu",
+          "published_time": "06:00:00",
+          "stop_sequence": 1,
+          "gtfs_departure_seconds": 21610,
+          "delta_seconds": -10
+        },
+        "middle": {
+          "stop_id": "10211",
+          "stop_name": "SERİK CD-9",
+          "published_time": "06:38:30",
+          "stop_sequence": 34,
+          "gtfs_departure_seconds": 23920,
+          "delta_seconds": -10
+        },
+        "last": {
+          "stop_id": "46028",
+          "stop_name": "MANAVGAT SORGUN BLV-3",
+          "published_time": "07:58:00",
+          "stop_sequence": 66,
+          "gtfs_departure_seconds": 28690,
+          "delta_seconds": -10
+        }
+      },
+      "detail": "First, middle, and last shared stops are within 60 seconds.",
+      "first_stop_id": "40519",
+      "first_stop_name": "Antalya Terminali İlçe İndirme Peronu",
+      "first_published_time": "06:00:00",
+      "first_delta_seconds": -10,
+      "middle_stop_id": "10211",
+      "middle_stop_name": "SERİK CD-9",
+      "middle_published_time": "06:38:30",
+      "middle_delta_seconds": -10,
+      "last_stop_id": "46028",
+      "last_stop_name": "MANAVGAT SORGUN BLV-3",
+      "last_published_time": "07:58:00",
+      "last_delta_seconds": -10
+    },
+    {
+      "route_short_name": "SA19",
+      "day": "Wednesday",
+      "day_code": 3,
+      "role": "excluded_below_80_percent",
+      "service_id": "service_1_MTWTFss",
+      "direction": "Gidiş",
+      "official_route_value": "15190",
+      "published_direction_values": [
+        "Gidiş"
+      ],
+      "status": "pass",
+      "gtfs_trip_id": "420959-1",
+      "pattern_name": "Antalya-Serik",
+      "published_stops": 50,
+      "shared_stops": 50,
+      "exact_stop_times": 0,
+      "anchors": {
+        "first": {
+          "stop_id": "40519",
+          "stop_name": "Antalya Terminali İlçe İndirme Peronu",
+          "published_time": "06:11:00",
+          "stop_sequence": 1,
+          "gtfs_departure_seconds": 22270,
+          "delta_seconds": -10
+        },
+        "middle": {
+          "stop_id": "12657",
+          "stop_name": "ANTALYA TİCARET VE SANAYİ ODASI-2",
+          "published_time": "06:42:00",
+          "stop_sequence": 26,
+          "gtfs_departure_seconds": 24130,
+          "delta_seconds": -10
+        },
+        "last": {
+          "stop_id": "42728",
+          "stop_name": "Belek Cd 1",
+          "published_time": "07:33:00",
+          "stop_sequence": 50,
+          "gtfs_departure_seconds": 27190,
+          "delta_seconds": -10
+        }
+      },
+      "detail": "First, middle, and last shared stops are within 60 seconds.",
+      "first_stop_id": "40519",
+      "first_stop_name": "Antalya Terminali İlçe İndirme Peronu",
+      "first_published_time": "06:11:00",
+      "first_delta_seconds": -10,
+      "middle_stop_id": "12657",
+      "middle_stop_name": "ANTALYA TİCARET VE SANAYİ ODASI-2",
+      "middle_published_time": "06:42:00",
+      "middle_delta_seconds": -10,
+      "last_stop_id": "42728",
+      "last_stop_name": "Belek Cd 1",
+      "last_published_time": "07:33:00",
+      "last_delta_seconds": -10
+    },
+    {
+      "route_short_name": "998",
+      "day": "Saturday",
+      "day_code": 6,
+      "role": "saturday_repeat",
+      "service_id": "service_2_mtwtfSs",
+      "direction": "Gidiş",
+      "official_route_value": "9980",
+      "published_direction_values": [
+        "Gidiş"
+      ],
+      "status": "pass",
+      "gtfs_trip_id": "997413-2",
+      "pattern_name": "MÜZE - ZERDALİLİK",
+      "published_stops": 9,
+      "shared_stops": 9,
+      "exact_stop_times": 1,
+      "anchors": {
+        "first": {
+          "stop_id": "15055",
+          "stop_name": "MÜZE 1",
+          "published_time": "07:30:00",
+          "stop_sequence": 1,
+          "gtfs_departure_seconds": 27000,
+          "delta_seconds": 0
+        },
+        "middle": {
+          "stop_id": "15061",
+          "stop_name": "KALE KAPI 2",
+          "published_time": "07:42:30",
+          "stop_sequence": 5,
+          "gtfs_departure_seconds": 27760,
+          "delta_seconds": -10
+        },
+        "last": {
+          "stop_id": "15068",
+          "stop_name": "ZERDALİLİK",
+          "published_time": "07:55:10",
+          "stop_sequence": 9,
+          "gtfs_departure_seconds": 28520,
+          "delta_seconds": -10
+        }
+      },
+      "detail": "First, middle, and last shared stops are within 60 seconds.",
+      "first_stop_id": "15055",
+      "first_stop_name": "MÜZE 1",
+      "first_published_time": "07:30:00",
+      "first_delta_seconds": 0,
+      "middle_stop_id": "15061",
+      "middle_stop_name": "KALE KAPI 2",
+      "middle_published_time": "07:42:30",
+      "middle_delta_seconds": -10,
+      "last_stop_id": "15068",
+      "last_stop_name": "ZERDALİLİK",
+      "last_published_time": "07:55:10",
+      "last_delta_seconds": -10
+    },
+    {
+      "route_short_name": "T1A",
+      "day": "Saturday",
+      "day_code": 6,
+      "role": "saturday_repeat",
+      "service_id": "service_2_mtwtfSs",
+      "direction": "Gidiş",
+      "official_route_value": "9020",
+      "published_direction_values": [
+        "Gidiş"
+      ],
+      "status": "pass",
+      "gtfs_trip_id": "1325988-2",
+      "pattern_name": "HAVALİMANI DURAĞI - FATİH DURAĞI",
+      "published_stops": 25,
+      "shared_stops": 25,
+      "exact_stop_times": 1,
+      "anchors": {
+        "first": {
+          "stop_id": "15209",
+          "stop_name": "HAVALİMANI2",
+          "published_time": "24:05:00",
+          "stop_sequence": 1,
+          "gtfs_departure_seconds": 86700,
+          "delta_seconds": 0
+        },
+        "middle": {
+          "stop_id": "15185",
+          "stop_name": "İSMETPAŞA2",
+          "published_time": "24:36:00",
+          "stop_sequence": 13,
+          "gtfs_departure_seconds": 88580,
+          "delta_seconds": -20
+        },
+        "last": {
+          "stop_id": "15161",
+          "stop_name": "FATİH2",
+          "published_time": "25:03:00",
+          "stop_sequence": 25,
+          "gtfs_departure_seconds": 90200,
+          "delta_seconds": -20
+        }
+      },
+      "detail": "First, middle, and last shared stops are within 60 seconds.",
+      "first_stop_id": "15209",
+      "first_stop_name": "HAVALİMANI2",
+      "first_published_time": "24:05:00",
+      "first_delta_seconds": 0,
+      "middle_stop_id": "15185",
+      "middle_stop_name": "İSMETPAŞA2",
+      "middle_published_time": "24:36:00",
+      "middle_delta_seconds": -20,
+      "last_stop_id": "15161",
+      "last_stop_name": "FATİH2",
+      "last_published_time": "25:03:00",
+      "last_delta_seconds": -20
+    },
+    {
+      "route_short_name": "VF01",
+      "day": "Saturday",
+      "day_code": 6,
+      "role": "saturday_repeat",
+      "service_id": "service_2_mtwtfSs",
+      "direction": "Gidiş",
+      "official_route_value": "10",
+      "published_direction_values": [
+        "Gidiş"
+      ],
+      "status": "fail",
+      "gtfs_trip_id": "1403483-2",
+      "pattern_name": "FAKÜLTE - VARSAK ALTIAYAK",
+      "published_stops": 60,
+      "shared_stops": 59,
+      "exact_stop_times": 0,
+      "anchors": {
+        "first": {
+          "stop_id": "12343",
+          "stop_name": "75 YIL CD-1",
+          "published_time": "06:45:00",
+          "stop_sequence": 1,
+          "gtfs_departure_seconds": 24305,
+          "delta_seconds": -5
+        },
+        "middle": {
+          "stop_id": "10974",
+          "stop_name": "YEŞİLIRMAK CD-19",
+          "published_time": "07:18:53",
+          "stop_sequence": 30,
+          "gtfs_departure_seconds": 26270,
+          "delta_seconds": 63
+        },
+        "last": {
+          "stop_id": "13008",
+          "stop_name": "ALTIAYAK DEPOLAMA",
+          "published_time": "07:51:00",
+          "stop_sequence": 59,
+          "gtfs_departure_seconds": 28205,
+          "delta_seconds": 55
+        }
+      },
+      "detail": "At least one of the first, middle, or last shared stops differs by more than 60 seconds.",
+      "first_stop_id": "12343",
+      "first_stop_name": "75 YIL CD-1",
+      "first_published_time": "06:45:00",
+      "first_delta_seconds": -5,
+      "middle_stop_id": "10974",
+      "middle_stop_name": "YEŞİLIRMAK CD-19",
+      "middle_published_time": "07:18:53",
+      "middle_delta_seconds": 63,
+      "last_stop_id": "13008",
+      "last_stop_name": "ALTIAYAK DEPOLAMA",
+      "last_published_time": "07:51:00",
+      "last_delta_seconds": 55
+    },
+    {
+      "route_short_name": "KL08",
+      "day": "Saturday",
+      "day_code": 6,
+      "role": "saturday_repeat",
+      "service_id": "service_2_mtwtfSs",
+      "direction": "Gidiş",
+      "official_route_value": "80",
+      "published_direction_values": [
+        "Gidiş"
+      ],
+      "status": "pass",
+      "gtfs_trip_id": "1409697-2",
+      "pattern_name": "GÜZELOBA - SARISU DEPOLAMA",
+      "published_stops": 91,
+      "shared_stops": 90,
+      "exact_stop_times": 0,
+      "anchors": {
+        "first": {
+          "stop_id": "13009",
+          "stop_name": "GÜZELOBA DEPOLAMA",
+          "published_time": "05:45:00",
+          "stop_sequence": 1,
+          "gtfs_departure_seconds": 20705,
+          "delta_seconds": -5
+        },
+        "middle": {
+          "stop_id": "10125",
+          "stop_name": "İSMET GÖKŞEN CD-10",
+          "published_time": "06:45:08",
+          "stop_sequence": 46,
+          "gtfs_departure_seconds": 24313,
+          "delta_seconds": -5
+        },
+        "last": {
+          "stop_id": "13001",
+          "stop_name": "SARISU DEPOLAMA MERKEZİ-1",
+          "published_time": "07:42:00",
+          "stop_sequence": 90,
+          "gtfs_departure_seconds": 27665,
+          "delta_seconds": 55
+        }
+      },
+      "detail": "First, middle, and last shared stops are within 60 seconds.",
+      "first_stop_id": "13009",
+      "first_stop_name": "GÜZELOBA DEPOLAMA",
+      "first_published_time": "05:45:00",
+      "first_delta_seconds": -5,
+      "middle_stop_id": "10125",
+      "middle_stop_name": "İSMET GÖKŞEN CD-10",
+      "middle_published_time": "06:45:08",
+      "middle_delta_seconds": -5,
+      "last_stop_id": "13001",
+      "last_stop_name": "SARISU DEPOLAMA MERKEZİ-1",
+      "last_published_time": "07:42:00",
+      "last_delta_seconds": 55
+    }
+  ],
+  "saturday_compared_with_wednesday": [
+    {
+      "route_short_name": "998",
+      "wednesday_status": "pass",
+      "saturday_status": "pass",
+      "wednesday_first_time": "07:30:00",
+      "saturday_first_time": "07:30:00",
+      "same_first_stop": true,
+      "first_time_delta_seconds": 0
+    },
+    {
+      "route_short_name": "KL08",
+      "wednesday_status": "pass",
+      "saturday_status": "pass",
+      "wednesday_first_time": "05:45:00",
+      "saturday_first_time": "05:45:00",
+      "same_first_stop": true,
+      "first_time_delta_seconds": 0
+    },
+    {
+      "route_short_name": "T1A",
+      "wednesday_status": "pass",
+      "saturday_status": "pass",
+      "wednesday_first_time": "24:05:00",
+      "saturday_first_time": "24:05:00",
+      "same_first_stop": true,
+      "first_time_delta_seconds": 0
+    },
+    {
+      "route_short_name": "VF01",
+      "wednesday_status": "fail",
+      "saturday_status": "fail",
+      "wednesday_first_time": "06:45:00",
+      "saturday_first_time": "06:45:00",
+      "same_first_stop": true,
+      "first_time_delta_seconds": 0
+    }
+  ],
+  "counts": {
+    "patterns": 20,
+    "wednesday_pass": 14,
+    "wednesday_comparable": 16,
+    "fetch_errors": 0,
+    "not_listed": 0
+  }
+}

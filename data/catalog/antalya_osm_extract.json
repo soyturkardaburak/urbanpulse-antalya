@@ -1,0 +1,18 @@
+{
+  "id": "antalya-study-osm",
+  "name": "OpenStreetMap extract for the Antalya study area",
+  "organization": "Cropped from Geofabrik Turkey; \u00a9 OpenStreetMap contributors",
+  "source_url": "https://download.geofabrik.de/europe/turkey-latest.osm.pbf",
+  "retrieved_at": "2026-09-29T20:27:06.499153+00:00",
+  "license": "ODbL 1.0",
+  "format": "OSM PBF",
+  "content_sha256": "5067a98a2c656846ebe90e4c7ebfb3a736250923ca1e964883df89636db752f3",
+  "byte_size": 5525893,
+  "parent_sha256": "0ed7f472a2310e3e6051840ea952a5c25788039def47b0f5e4b06b5dbb32226c",
+  "geographic_coverage": "Bounding box of the Phase 1 study area expanded by 0.04 degrees on each side (30.543523,36.799722,30.888426,37.041883). This is not the full GTFS extent and not Antalya Province.",
+  "processing_notes": "osmium extract with strategy complete_ways, via the urbanpulse-osmium image.",
+  "limitations": [
+    "The crop is for later pedestrian routing inside the study area.",
+    "Ways that only touch the provincial GTFS fringe outside this box are absent."
+  ]
+}

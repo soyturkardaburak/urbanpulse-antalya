@@ -1,0 +1,26 @@
+# Raw and bulky derived data. Provenance metadata under data/catalog is tracked.
+data/raw/
+data/processed/
+data/results/
+
+# Local environment
+.env
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Frontend
+web/node_modules/
+web/dist/
+
+# Editor and OS
+.DS_Store
+Thumbs.db
+*.log

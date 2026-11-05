@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>UrbanPulse Antalya — Phase 1 data quality</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0 auto; max-width: 920px; padding: 2rem 1.25rem 4rem; font-family: "Segoe UI", sans-serif; line-height: 1.5; color: #1a1916; background: #f7f5f0; }
+    h1, h2 { font-family: Georgia, serif; font-weight: 600; line-height: 1.2; }
+    h1 { font-size: 1.8rem; }
+    table { width: 100%; border-collapse: collapse; margin: 0.75rem 0 1.5rem; background: white; }
+    th, td { text-align: left; padding: 0.45rem 0.55rem; border-bottom: 1px solid #e4dfd4; vertical-align: top; font-size: 0.92rem; }
+    th { font-size: 0.78rem; letter-spacing: 0.03em; text-transform: uppercase; color: #5e5a54; }
+    .banner { background: #1e4d5c; color: #f7f5f0; padding: 0.8rem 1rem; }
+    .error { color: #8c3b2a; font-weight: 600; }
+    .warning { color: #8a5a12; font-weight: 600; }
+    code { font-family: Consolas, monospace; font-size: 0.86em; }
+  </style>
+</head>
+<body>
+  <p class="banner">Phase 1 data-quality report. Scheduled accessibility has not been calculated.</p>
+  <h1>Antalya GTFS coverage and validation</h1>
+  <p>Issues below are data-quality or coverage findings. They are not measurements of public-transport accessibility.</p>
+  <p>Generated 2026-09-29T20:24:39.516009+00:00.</p>
+  <p>Feed SHA-256 <code>caff3834e75be575d2f19992b38c5650446747d38e7f026a7e5a2572ab7c145a</code></p>
+  <p>Feed stop bbox longitude 29.32007 to 32.31751, latitude 36.20068 to 37.23487. Phase 1 study area covers 237.0 km² and 2794 of 4630 valid stops.</p>
+  <p>calendar.txt stamps services from 20260901 to 20261031. This window is produced by the converter unless an official feed replaces it.</p>
+
+  <h2>Network</h2>
+  <table>
+    <tbody>
+      
+      <tr><th>agencies</th><td>2</td></tr>
+      
+      <tr><th>routes</th><td>169</td></tr>
+      
+      <tr><th>stops</th><td>4630</td></tr>
+      
+      <tr><th>valid_stops</th><td>4630</td></tr>
+      
+      <tr><th>trips</th><td>22034</td></tr>
+      
+      <tr><th>stop_times</th><td>1297130</td></tr>
+      
+      <tr><th>shapes</th><td>336</td></tr>
+      
+      <tr><th>calendar_services</th><td>3</td></tr>
+      
+    </tbody>
+  </table>
+
+  <h2>Calendar</h2>
+  <table>
+    <thead><tr><th>Service</th><th>Days</th><th>From</th><th>To</th><th>Trips</th></tr></thead>
+    <tbody>
+      
+      <tr>
+        <td><code>service_1_MTWTFss</code></td>
+        <td>Monday, Tuesday, Wednesday, Thursday, Friday</td>
+        <td>20260901</td>
+        <td>20261031</td>
+        <td>7992</td>
+      </tr>
+      
+      <tr>
+        <td><code>service_2_mtwtfSs</code></td>
+        <td>Saturday</td>
+        <td>20260901</td>
+        <td>20261031</td>
+        <td>7497</td>
+      </tr>
+      
+      <tr>
+        <td><code>service_3_mtwtfsS</code></td>
+        <td>Sunday</td>
+        <td>20260901</td>
+        <td>20261031</td>
+        <td>6545</td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+  <h2>Study area</h2>
+  <p>
+    237.03 km².
+    2794 valid stops inside,
+    1836 outside.
+    Required checks passed: yes.
+  </p>
+  <table>
+    <thead><tr><th>Place</th><th>Role</th><th>Expected</th><th>Result</th></tr></thead>
+    <tbody>
+      
+      <tr>
+        <td>Kaleiçi</td>
+        <td>required</td>
+        <td>inside</td>
+        <td>inside — pass</td>
+      </tr>
+      
+      <tr>
+        <td>Kaş</td>
+        <td>required</td>
+        <td>outside</td>
+        <td>outside — pass</td>
+      </tr>
+      
+      <tr>
+        <td>Gazipaşa</td>
+        <td>required</td>
+        <td>outside</td>
+        <td>outside — pass</td>
+      </tr>
+      
+      <tr>
+        <td>Antalya Airport</td>
+        <td>descriptive</td>
+        <td>inside</td>
+        <td>outside — fail</td>
+      </tr>
+      
+      <tr>
+        <td>Konyaaltı</td>
+        <td>descriptive</td>
+        <td>inside</td>
+        <td>inside — pass</td>
+      </tr>
+      
+      <tr>
+        <td>Kepez</td>
+        <td>descriptive</td>
+        <td>inside</td>
+        <td>inside — pass</td>
+      </tr>
+      
+      <tr>
+        <td>Döşemealtı</td>
+        <td>descriptive</td>
+        <td>inside</td>
+        <td>outside — fail</td>
+      </tr>
+      
+      <tr>
+        <td>Aksu</td>
+        <td>descriptive</td>
+        <td>inside</td>
+        <td>outside — fail</td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+  <h2>Route register</h2>
+  <p>A route is included when at least 80 percent of its valid stops lie inside the study area and it has at least two valid stops. Quality flags do not by themselves exclude a route.</p>
+  <p>Included 102. Excluded 67.</p>
+  <table>
+    <thead><tr><th>Short name</th><th>Name</th><th>Share inside</th><th>Reason</th></tr></thead>
+    <tbody>
+      
+      <tr>
+        <td>107</td>
+        <td>SARISU-KADINLAR PLAJI</td>
+        <td>0.0</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>514</td>
+        <td>AKSU DEPOLAMA-KARAÖZ</td>
+        <td>0.0</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>514A</td>
+        <td>AKSU DEPOLAMA-YEŞİLKARAMAN</td>
+        <td>0.0</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>527A</td>
+        <td>AKSU-KUNDU</td>
+        <td>0.0</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>AC05</td>
+        <td>AKSU-ALAYLI</td>
+        <td>0.0</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>AC05A</td>
+        <td>AKSU-ALAYLI</td>
+        <td>0.0</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>AC05B</td>
+        <td>AKSU-GULOLUK</td>
+        <td>0.0</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>BB38</td>
+        <td>SARISU DEPOLAMA-BALIKÇI BARINAĞI</td>
+        <td>0.0</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>DA6</td>
+        <td>ORGANİZE SANAYİ-DÖŞEMEALTI</td>
+        <td>0.0</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>DA6A</td>
+        <td>ORGANİZE SANAYİ-DÖŞEMEALTI</td>
+        <td>0.0</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>FH06</td>
+        <td>Finike Otogar-Hasyurt</td>
+        <td>0.0</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>FT01</td>
+        <td>Finike Otogar-Turunçova</td>
+        <td>0.0</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>GAL02</td>
+        <td>Gazipaşa Merkez-Alanya</td>
+        <td>0.0</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>HT01</td>
+        <td>Kumluca Terminal-Temel Egitim</td>
+        <td>0.0</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>KF02</td>
+        <td>Kumluca Otogar-Finike Otogar</td>
+        <td>0.0</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>MK81</td>
+        <td>AKSU DEPOLAMA-TOPALLI</td>
+        <td>0.0</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>MK81A</td>
+        <td>AKSU-YORUKLER MAHALLESI</td>
+        <td>0.0</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>T35</td>
+        <td>10001 - AKDENİZ  BLV-1-10003 - AKDENİZ  BLV-3</td>
+        <td>0.0</td>
+        <td>fewer_than_2_stops</td>
+      </tr>
+      
+      <tr>
+        <td>T5</td>
+        <td>10259 - TIP FAKÜLTESİ-10001 - AKDENİZ  BLV-1</td>
+        <td>0.0</td>
+        <td>fewer_than_2_stops</td>
+      </tr>
+      
+      <tr>
+        <td>TC09</td>
+        <td>Kumluca Terminal-Camkırığı</td>
+        <td>0.0</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>TH08</td>
+        <td>Kumluca Terminal-Kavakköy</td>
+        <td>0.0</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>TO03</td>
+        <td>Kumluca Terminal-Ortaköy</td>
+        <td>0.0</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>TS05</td>
+        <td>Kumluca Terminal-Salur</td>
+        <td>0.0</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>TT12</td>
+        <td>Kumluca Terminal-Turunçova</td>
+        <td>0.0</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>TYF05</td>
+        <td>Devlet Hastanesi-Turunçova çarşı</td>
+        <td>0.0</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>D19A</td>
+        <td>ORGANİZE SANAYİ-SEHİR HASTANESİ</td>
+        <td>0.017241</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>D19</td>
+        <td>ORGANİZE-SEHİR HASTANESİ</td>
+        <td>0.017391</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>EA01</td>
+        <td>Antalya Terminal-Elmalı Terminal</td>
+        <td>0.139535</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>AA01</td>
+        <td>Alanya Otogar-Antalya Otogar</td>
+        <td>0.149425</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>DC27</td>
+        <td>OTOGAR DEPOLAMA-BADEMAGACI</td>
+        <td>0.15493</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>DM85A</td>
+        <td>OTOGAR DEPOLAMA-EKSILI</td>
+        <td>0.166667</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>DM85</td>
+        <td>OTOGAR DEPOLAMA-KİLLİK</td>
+        <td>0.188073</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>DM86</td>
+        <td>OTOGAR DEPOLAMA-KARAVELILER</td>
+        <td>0.224599</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>509</td>
+        <td>OTOGAR DEPOLAMA-KIRISCILER</td>
+        <td>0.244186</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>521C</td>
+        <td>SARISU DEPOLAMA-GEYİKBAYIRI</td>
+        <td>0.244186</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>DC79</td>
+        <td>DOSEMEALTI-SIGORTA</td>
+        <td>0.253731</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>527</td>
+        <td>AKSU-KUNDU</td>
+        <td>0.263158</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>AK03</td>
+        <td>Antalya Terminal-Kınık</td>
+        <td>0.270968</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>BA22</td>
+        <td>Boğazkent-Antalya</td>
+        <td>0.347826</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>DC15</td>
+        <td>MEYDAN-DOSEMEALTI</td>
+        <td>0.353933</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>521B</td>
+        <td>OTOGAR-HACISEKILILER-KUM MEVKII</td>
+        <td>0.362205</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>TA08</td>
+        <td>Tekirova Kavşak-Antalya Otogar</td>
+        <td>0.363636</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>GAN01</td>
+        <td>Gazipaşa Merkez-Antalya Terminal</td>
+        <td>0.375</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>506A</td>
+        <td>MEYDAN-YAĞCA</td>
+        <td>0.380208</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>DC15A</td>
+        <td>MEYDAN-DOSEMEALTI</td>
+        <td>0.382199</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>AK01</td>
+        <td>Korkuteli Terminal-Antalya Otogarı</td>
+        <td>0.384615</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>AB07</td>
+        <td>ORGANİZE SANAYİ-AKDENİZ ÜNİVERSİTESİ</td>
+        <td>0.38961</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>521</td>
+        <td>OTOGAR DEPOLAMA-FESLİKAN YAYLASI</td>
+        <td>0.409449</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>521A</td>
+        <td>OTOGAR DEPOLAMA-AKDAMLAR</td>
+        <td>0.418182</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>SD20A</td>
+        <td>SARISU DEPOLAMA-DOSEMEALTI</td>
+        <td>0.439655</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>506</td>
+        <td>MEYDAN DEPOLAMA-YAGCA</td>
+        <td>0.44385</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>SD20</td>
+        <td>SARISU-ORGANIZE SANAYI</td>
+        <td>0.444915</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>MAN47</td>
+        <td>Manavgat Otogarı-Antalya Otogarı</td>
+        <td>0.463636</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>KA07</td>
+        <td>Kemer Terminal-Antalya Terminal</td>
+        <td>0.463768</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>VY24</td>
+        <td>VARSAK YAYLASI-VARSAK</td>
+        <td>0.467532</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>515A</td>
+        <td>OTOGAR DEPOLAMA-SOGUTCUMASI</td>
+        <td>0.505747</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>TK51</td>
+        <td>OTOGAR DEPOLAMA-AKDAMLAR</td>
+        <td>0.532544</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>TK51A</td>
+        <td>OTOGAR DEPOLAMA-DOYRAN</td>
+        <td>0.59589</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>528</td>
+        <td>AKSU-GUZELOBA</td>
+        <td>0.626168</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>511</td>
+        <td>OTOGAR DEPOLAMA-KUNDU</td>
+        <td>0.631841</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>MD25</td>
+        <td>MEYDAN DEPOLAMA-DOYRAN</td>
+        <td>0.729323</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>LC07A</td>
+        <td>KUNDU-OTOGAR DEPOLAMA</td>
+        <td>0.735135</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>SA19</td>
+        <td>Serik-Antalya</td>
+        <td>0.752688</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>508</td>
+        <td>VARSAK-CAMLICA-KIZILLI</td>
+        <td>0.754098</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>MK80</td>
+        <td>KURŞUNLU ŞELALESİ-DEMIRCILER</td>
+        <td>0.755102</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>507</td>
+        <td>VARSAK-KIRISCILER-KIZILLI</td>
+        <td>0.793103</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+      <tr>
+        <td>AF04A</td>
+        <td>AKSU-BANIO KAVŞAĞI</td>
+        <td>0.794643</td>
+        <td>fewer_than_80_percent_of_stops_inside_study_area</td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+  <h2>Included routes with quality flags</h2>
+  <p>These routes stay in the future routing set. The flags are warnings, not exclusions.</p>
+  <table>
+    <thead><tr><th>Short name</th><th>Name</th><th>Flags</th></tr></thead>
+    <tbody>
+      
+      <tr>
+        <td>T1B</td>
+        <td>FATİH-EXPO</td>
+        <td>gtfs_route_type_2</td>
+      </tr>
+      
+      <tr>
+        <td>T1A</td>
+        <td>FATİH-HAVALİMANI</td>
+        <td>gtfs_route_type_2</td>
+      </tr>
+      
+      <tr>
+        <td>T1C</td>
+        <td>FATİH-AKSU</td>
+        <td>agency_named_test;gtfs_route_type_0</td>
+      </tr>
+      
+      <tr>
+        <td>114</td>
+        <td>ŞEHİR HASTANESİ-FATİH</td>
+        <td>agency_named_test</td>
+      </tr>
+      
+      <tr>
+        <td>MC58</td>
+        <td>OTOGAR-FATIH TRAMVAY</td>
+        <td>gtfs_type_bus_but_name_suggests_tram</td>
+      </tr>
+      
+      <tr>
+        <td>MC68</td>
+        <td>OTOGAR DEPOLAMA-FATIH TRAMVAY</td>
+        <td>gtfs_type_bus_but_name_suggests_tram</td>
+      </tr>
+      
+      <tr>
+        <td>NT07</td>
+        <td>NOSTALJİ TRAMVAY AMBARI-MÜZE</td>
+        <td>agency_named_test;gtfs_type_bus_but_name_suggests_tram</td>
+      </tr>
+      
+      <tr>
+        <td>T1D</td>
+        <td>FATİH-KIŞLA</td>
+        <td>agency_named_test;gtfs_route_type_0</td>
+      </tr>
+      
+      <tr>
+        <td>T3</td>
+        <td>VARSAK-MÜZE</td>
+        <td>gtfs_route_type_0</td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+  <h2>Validation issues</h2>
+  <table>
+    <thead><tr><th>Severity</th><th>Code</th><th>Count</th><th>Message</th></tr></thead>
+    <tbody>
+      
+      <tr>
+        <td class="warning">warning</td>
+        <td><code>departure_before_arrival</code></td>
+        <td>1531</td>
+        <td>Departure time is earlier than arrival time. 1347 of these differ by 60 seconds or less. Phase 1 records them and does not rewrite the feed.</td>
+      </tr>
+      
+      <tr>
+        <td class="warning">warning</td>
+        <td><code>calendar_window_looks_like_generator_default</code></td>
+        <td>3</td>
+        <td>Every service shares the window 20260901 to 20261031 (60 days). The KentKart converter writes the generation date and a date 60 days later. Treat this as a feed stamp, not as the operator&#39;s published validity period, until it is compared with an official timetable.</td>
+      </tr>
+      
+      <tr>
+        <td class="warning">warning</td>
+        <td><code>holiday_exceptions_absent</code></td>
+        <td>1</td>
+        <td>calendar_dates.txt is not in this feed. Public holidays inside the stamped window are not encoded.</td>
+      </tr>
+      
+      <tr>
+        <td class="info">info</td>
+        <td><code>transfers_table_absent</code></td>
+        <td>1</td>
+        <td>transfers.txt is not in this feed. Phase 1 does not infer transfer rules.</td>
+      </tr>
+      
+      <tr>
+        <td class="info">info</td>
+        <td><code>wheelchair_fields_absent</code></td>
+        <td>1</td>
+        <td>This feed has no wheelchair_boarding or wheelchair_accessible fields. Step-free access cannot be assessed.</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</body>
+</html>

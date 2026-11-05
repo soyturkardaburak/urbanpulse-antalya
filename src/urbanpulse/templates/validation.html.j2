@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>UrbanPulse Antalya — Phase 1 data quality</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0 auto; max-width: 920px; padding: 2rem 1.25rem 4rem; font-family: "Segoe UI", sans-serif; line-height: 1.5; color: #1a1916; background: #f7f5f0; }
+    h1, h2 { font-family: Georgia, serif; font-weight: 600; line-height: 1.2; }
+    h1 { font-size: 1.8rem; }
+    table { width: 100%; border-collapse: collapse; margin: 0.75rem 0 1.5rem; background: white; }
+    th, td { text-align: left; padding: 0.45rem 0.55rem; border-bottom: 1px solid #e4dfd4; vertical-align: top; font-size: 0.92rem; }
+    th { font-size: 0.78rem; letter-spacing: 0.03em; text-transform: uppercase; color: #5e5a54; }
+    .banner { background: #1e4d5c; color: #f7f5f0; padding: 0.8rem 1rem; }
+    .error { color: #8c3b2a; font-weight: 600; }
+    .warning { color: #8a5a12; font-weight: 600; }
+    code { font-family: Consolas, monospace; font-size: 0.86em; }
+  </style>
+</head>
+<body>
+  <p class="banner">Phase 1 data-quality report. Scheduled accessibility has not been calculated.</p>
+  <h1>Antalya GTFS coverage and validation</h1>
+  <p>{{ summary.distinction }}</p>
+  <p>Generated {{ summary.generated_at }}.</p>
+  <p>Feed SHA-256 <code>{{ summary.dataset.content_sha256 }}</code></p>
+  <p>{{ summary.dataset.geographic_coverage }}</p>
+  <p>{{ summary.dataset.temporal_coverage }}</p>
+
+  <h2>Network</h2>
+  <table>
+    <tbody>
+      {% for key, value in summary.counts.items() %}
+      <tr><th>{{ key }}</th><td>{{ value }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <h2>Calendar</h2>
+  <table>
+    <thead><tr><th>Service</th><th>Days</th><th>From</th><th>To</th><th>Trips</th></tr></thead>
+    <tbody>
+      {% for row in summary.calendar %}
+      <tr>
+        <td><code>{{ row.service_id }}</code></td>
+        <td>{{ row.day_label }}</td>
+        <td>{{ row.start_date }}</td>
+        <td>{{ row.end_date }}</td>
+        <td>{{ row.trip_count }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <h2>Study area</h2>
+  <p>
+    {{ summary.study_area.area_km2 }} km².
+    {{ summary.study_area.stops_inside }} valid stops inside,
+    {{ summary.study_area.stops_outside }} outside.
+    Required checks passed: {{ "yes" if summary.study_area.sane else "no" }}.
+  </p>
+  <table>
+    <thead><tr><th>Place</th><th>Role</th><th>Expected</th><th>Result</th></tr></thead>
+    <tbody>
+      {% for point in summary.study_area.control_points %}
+      <tr>
+        <td>{{ point.name }}</td>
+        <td>{{ point.role }}</td>
+        <td>{{ point.expect }}</td>
+        <td>{{ "inside" if point.inside else "outside" }} — {{ "pass" if point.passed else "fail" }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <h2>Route register</h2>
+  <p>{{ summary.route_decisions.rule }}</p>
+  <p>Included {{ summary.route_decisions.included }}. Excluded {{ summary.route_decisions.excluded }}.</p>
+  <table>
+    <thead><tr><th>Short name</th><th>Name</th><th>Share inside</th><th>Reason</th></tr></thead>
+    <tbody>
+      {% for route in summary.route_decisions.excluded_routes %}
+      <tr>
+        <td>{{ route.route_short_name }}</td>
+        <td>{{ route.route_long_name }}</td>
+        <td>{{ route.share_stops_inside }}</td>
+        <td>{{ route.exclude_reason }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <h2>Included routes with quality flags</h2>
+  <p>These routes stay in the future routing set. The flags are warnings, not exclusions.</p>
+  <table>
+    <thead><tr><th>Short name</th><th>Name</th><th>Flags</th></tr></thead>
+    <tbody>
+      {% for route in summary.route_decisions.flagged_included_routes %}
+      <tr>
+        <td>{{ route.route_short_name }}</td>
+        <td>{{ route.route_long_name }}</td>
+        <td>{{ route.quality_flags }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <h2>Validation issues</h2>
+  <table>
+    <thead><tr><th>Severity</th><th>Code</th><th>Count</th><th>Message</th></tr></thead>
+    <tbody>
+      {% for issue in summary.issues %}
+      <tr>
+        <td class="{{ issue.severity }}">{{ issue.severity }}</td>
+        <td><code>{{ issue.code }}</code></td>
+        <td>{{ issue.count }}</td>
+        <td>{{ issue.message }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>

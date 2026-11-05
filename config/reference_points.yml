@@ -1,0 +1,68 @@
+# Containment checks for the algorithmic study area.
+# Coordinates are approximate public locations, not surveyed centroids.
+# "required" points must pass. "descriptive" points are reported either way.
+
+points:
+  - id: kaleici
+    name: Kaleiçi
+    lon: 30.7056
+    lat: 36.8841
+    expect: inside
+    role: required
+    note: Historic centre of Antalya. A dense-service study area that misses this point is not the central urban network.
+
+  - id: kas
+    name: Kaş
+    lon: 29.6384
+    lat: 36.1997
+    expect: outside
+    role: required
+    note: Provincial town on the GTFS fringe. It must not enter the central comparison area.
+
+  - id: gazipasa
+    name: Gazipaşa
+    lon: 32.3142
+    lat: 36.2697
+    expect: outside
+    role: required
+    note: Eastern provincial fringe of this feed. It must not enter the central comparison area.
+
+  - id: airport
+    name: Antalya Airport
+    lon: 30.8005
+    lat: 36.8987
+    expect: inside
+    role: descriptive
+    note: Reported only. Failure does not by itself reject the polygon.
+
+  - id: konyaalti
+    name: Konyaaltı
+    lon: 30.6380
+    lat: 36.8590
+    expect: inside
+    role: descriptive
+    note: Reported only.
+
+  - id: kepez
+    name: Kepez
+    lon: 30.7130
+    lat: 36.9300
+    expect: inside
+    role: descriptive
+    note: Reported only. Approximate district centre, not an official centroid.
+
+  - id: dosemealti
+    name: Döşemealtı
+    lon: 30.5903
+    lat: 37.0236
+    expect: inside
+    role: descriptive
+    note: Reported only. The district is large; this point may sit outside the dense stop cluster.
+
+  - id: aksu
+    name: Aksu
+    lon: 30.8480
+    lat: 36.9470
+    expect: inside
+    role: descriptive
+    note: Reported only.

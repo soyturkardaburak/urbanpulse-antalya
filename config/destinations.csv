@@ -1,0 +1,33 @@
+destination_id,name,category,include_in_routing,reason,source,source_id,longitude,latitude,geometry_type,point_method,inside_osm_extract
+H001,Kepez Devlet Hastanesi,healthcare,true,Major public hospital operated by the Ministry of Health.,openstreetmap amenity=hospital,a1263703126,30.726993,36.931924,MultiPolygon,representative_point,true
+H002,Memorial Antalya Hastanesi,healthcare,true,Major private general hospital.,openstreetmap amenity=hospital,a1303181026,30.693495,36.917663,MultiPolygon,representative_point,true
+H003,Özel Lara Anadolu Hastanesi,healthcare,false,"Smaller private hospital, outside the reviewed general-hospital set.",openstreetmap amenity=hospital,a1315623150,30.793966,36.858862,MultiPolygon,representative_point,true
+H004,Land of Smile,healthcare,false,Tagged healthcare=dentist.,openstreetmap amenity=hospital,a1315715590,30.796490,36.854862,MultiPolygon,representative_point,true
+H005,ASV Yaşam Hastanesi,healthcare,false,"Smaller private hospital, outside the reviewed general-hospital set.",openstreetmap amenity=hospital,a1319698636,30.724556,36.899307,MultiPolygon,representative_point,true
+H006,Opera Yaşam Hastanesi,healthcare,false,"Smaller private hospital, outside the reviewed general-hospital set.",openstreetmap amenity=hospital,a1319787518,30.698753,36.901759,MultiPolygon,representative_point,true
+H007,Medstar Antalya Hastanesi,healthcare,true,Major private general hospital. The Topçular site is a separate row.,openstreetmap amenity=hospital,a1320875202,30.684871,36.894076,MultiPolygon,representative_point,true
+H008,Özel Akdeniz Şifa Hastanesi,healthcare,false,"Smaller private hospital, outside the reviewed general-hospital set.",openstreetmap amenity=hospital,a1329708012,30.708739,36.944337,MultiPolygon,representative_point,true
+H009,Özel Vitale Kadın ve Doğum Hastanesi,healthcare,false,"Specialty hospital for women and birth, not a general hospital.",openstreetmap amenity=hospital,a1330287268,30.675169,36.917877,MultiPolygon,representative_point,true
+H010,ÖZEL TERMESSOS HASTANESİ,healthcare,false,"Smaller private hospital, outside the reviewed general-hospital set.",openstreetmap amenity=hospital,a2059252554,30.603562,37.035153,MultiPolygon,representative_point,true
+H011,,healthcare,false,Unnamed amenity=hospital feature.,openstreetmap amenity=hospital,a2370207574,30.626651,36.893089,MultiPolygon,representative_point,true
+H012,Atatürk Devlet Hastanesi Semt Polikliniği,healthcare,false,"Outpatient annex, not the main public hospital.",openstreetmap amenity=hospital,a2371354296,30.724646,36.895459,MultiPolygon,representative_point,true
+H013,,healthcare,false,Unnamed amenity=hospital feature.,openstreetmap amenity=hospital,a2403811238,30.647599,36.915736,MultiPolygon,representative_point,true
+H014,Antalya Şehir Hastanesi,healthcare,true,Major public city hospital operated by the Ministry of Health.,openstreetmap amenity=hospital,a2604179380,30.666684,36.953394,MultiPolygon,representative_point,true
+H015,Agagsia Dental Clinic,healthcare,false,"Dental clinic, not a general hospital.",openstreetmap amenity=hospital,a2739839516,30.825483,36.863864,MultiPolygon,representative_point,true
+H016,MedStar Topçular Hastanesi,healthcare,false,Separate smaller site. Medstar Antalya is the included hospital.,openstreetmap amenity=hospital,a413005954,30.739974,36.885454,MultiPolygon,representative_point,true
+H017,Uncalı Meydan Hastanesi,healthcare,false,"Smaller private hospital, outside the reviewed general-hospital set.",openstreetmap amenity=hospital,a643587824,30.620973,36.893059,MultiPolygon,representative_point,true
+H018,Antalya Eğitim Ve Araştırma Hastanesi,healthcare,true,Major public training and research hospital.,openstreetmap amenity=hospital,a643608096,30.678244,36.889812,MultiPolygon,representative_point,true
+H019,Özel Ofm Hastanesi,healthcare,false,"Smaller private hospital, outside the reviewed general-hospital set.",openstreetmap amenity=hospital,a709760676,30.691176,36.914254,MultiPolygon,representative_point,true
+H020,Antalya Atatürk Devlet Hastanesi,healthcare,true,Major public hospital.,openstreetmap amenity=hospital,a736564766,30.691791,36.898197,MultiPolygon,representative_point,true
+H021,Akdeniz Üniversitesi Hastanesi,healthcare,true,Major public university hospital.,openstreetmap amenity=hospital,a736809954,30.662619,36.897487,MultiPolygon,representative_point,true
+H022,Özel Olimpos Hastanesi,healthcare,false,"Smaller private hospital, outside the reviewed general-hospital set.",openstreetmap amenity=hospital,a736816120,30.634273,36.870960,MultiPolygon,representative_point,true
+H023,Özel Antalya Anadolu Hastanesi,healthcare,true,Major private general hospital.,openstreetmap amenity=hospital,a736906658,30.718899,36.887113,MultiPolygon,representative_point,true
+H024,Özel Rich Hastanesi,healthcare,false,"Smaller private hospital, outside the reviewed general-hospital set.",openstreetmap amenity=hospital,a736908684,30.733143,36.888174,MultiPolygon,representative_point,true
+H025,"Özel Yaşam Hastanesi, Antalya (Life Hospital)",healthcare,false,"Smaller private hospital, outside the reviewed general-hospital set.",openstreetmap amenity=hospital,a736926822,30.730768,36.862873,MultiPolygon,representative_point,true
+H026,Aşır Aksu Ek Hizmet Binası,healthcare,false,"Annex of another facility, not a separate general hospital.",openstreetmap amenity=hospital,n11811931087,30.627863,36.949344,Point,osm_node,true
+H027,Eye Surgery Antalya,healthcare,false,"Eye specialty, not a general hospital.",openstreetmap amenity=hospital,n12176953104,30.798965,36.860061,Point,osm_node,true
+H028,Eye Surgery Antalya,healthcare,false,"Eye specialty, not a general hospital.",openstreetmap amenity=hospital,n12176953105,30.797495,36.859112,Point,osm_node,true
+H029,Medical Park,healthcare,true,Major private general hospital. The extract has a point and no building polygon.,openstreetmap amenity=hospital,n1304981007,30.746826,36.856603,Point,osm_node,true
+H030,cinsel saglık hattı merkezi,healthcare,false,"Specialty clinic, not a general hospital.",openstreetmap amenity=hospital,n13307127620,30.788878,36.859256,Point,osm_node,true
+H031,Dünya Göz,healthcare,false,"Eye specialty, not a general hospital.",openstreetmap amenity=hospital,n6423825877,30.693453,36.918217,Point,osm_node,true
+H032,Çallı Meydan Tıp Merkezi,healthcare,false,"Named as a medical centre, not a general hospital.",openstreetmap amenity=hospital,n8878549158,30.686373,36.906960,Point,osm_node,true

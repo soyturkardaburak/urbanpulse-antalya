@@ -1,0 +1,40 @@
+[project]
+name = "urbanpulse-antalya"
+version = "0.1.0"
+description = "Scheduled public-transport coverage and accessibility analysis for Antalya"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115",
+    "geopandas>=1.0",
+    "h3>=4.1",
+    "jinja2>=3.1",
+    "numpy>=2.0",
+    "pandas>=2.2",
+    "psycopg[binary]>=3.2",
+    "pydantic-settings>=2.6",
+    "pyproj>=3.6",
+    "pyyaml>=6.0",
+    "shapely>=2.0",
+    "typer>=0.15",
+    "uvicorn[standard]>=0.32",
+]
+
+[project.optional-dependencies]
+dev = ["httpx>=0.28", "pytest>=8.3"]
+
+[project.scripts]
+urbanpulse = "urbanpulse.cli:app"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+urbanpulse = ["templates/*.j2"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
